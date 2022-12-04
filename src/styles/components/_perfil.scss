@@ -1,0 +1,101 @@
+.perfil{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 70px;
+    align-items: center;
+    opacity: 0;
+    animation: 2s apariciony 0.5s ease-in-out forwards;
+    transform: translateY(200px);
+    &_data-greeting{
+        font-size: $font-subtitle;
+        text-align: center;
+    }
+    &_figure{
+        width: 70%;
+        max-width: 350px;
+        border-radius: 50%;
+        order: 2;
+        margin: 30px;
+        box-shadow: 0 0 20px $color-claro;
+    }
+    &_img{
+        border-radius: 50%;
+        width: 100%;
+    }
+    &_data{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        @include glass; 
+        border-radius: 20px;
+        &-title{
+            color: azure;
+            font-size: $font-title;
+            text-align: center;
+            margin: 10px 0 15px 0;
+        }
+        &-subtitle{
+            color: azure;
+            font-size: $font-subtitle;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+    &_description{
+        order: 3;
+        width: 100%;
+        padding: 30px;
+        color: $color-claro;
+        border-radius: 20px;
+        font-size: $font-paragraph;
+        line-height: get-line-height($font-paragraph);
+        margin-top: 20px;
+        @include glass;
+    }
+}
+@include aparicion-ejey;
+
+@media (min-width: 760px){
+    .perfil{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        &_figure{
+            width: 40%;
+            order: 1;
+        }
+        &_data{
+            width: 40%;
+            background: none;
+            order: 2;
+        }
+        &_img{
+            animation: 1s grayscale-init 0s ease-in-out forwards;
+        }
+        &_img:hover{
+            animation: 0.4s grayscale 0s ease-in-out forwards;
+        }
+        &_description:hover{
+            box-shadow: 0 0 20px $color-claro;
+        }
+    }
+    @keyframes grayscale{
+        0%{
+            filter: grayscale(0.7);
+        }
+        100%{
+            filter: grayscale(0.15) drop-shadow(0 0 20px $color-primario);
+        }
+    }
+    @keyframes grayscale-init{
+        0%{
+            filter: grayscale(0.15) drop-shadow(0 0 20px $color-primario);
+        }
+        100%{
+            filter: grayscale(0.7);
+        }
+    }
+}

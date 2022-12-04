@@ -1,9 +1,70 @@
 
 $color-oscuro1: #373739;
-$color-oscuro2: #19191a;
-$color-oscuro3: #020202;
+
+$color-claro: aliceblue;
+// $color-primario: rgb(74, 24, 127);
+$color-primario: #2699cb;
+
+$font-family: 'Lato', sans-serif;
+$font-title: 3.2rem;
+$font-subtitle: 2.4rem;
+$font-paragraph: 1.6rem;
+$border-container: 10px;
+$border-item: 20px;
+
+@mixin glass{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px);
+}
+@mixin aparicion-ejex{
+    @keyframes aparicionx{
+        0%{
+            transform: translateX(-200px);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+    }
+}
+@mixin aparicion-ejey{
+    @keyframes apariciony{
+        0%{
+            transform: translateY(200px);
+        }
+        35%{
+            opacity: 0;    
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}
+@mixin opacidad{
+    @keyframes opacidad{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1
+        }
+    }
+}
+@mixin opacidad-init{
+    @keyframes opacidad-init{
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+}
 
 
+@function get-line-height($font-size){
+    @return $font-size + $font-size * 0.5;
+}
 
 *{
     box-sizing: border-box;
@@ -12,13 +73,24 @@ $color-oscuro3: #020202;
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth ;
 }
 body{
-    background-color: $color-oscuro1;
+    
+    // background: linear-gradient(to right, #BCC5Be 0%, #939FAE 100%);
+    // background: linear-gradient(to right, #626262 0%, $color-oscuro1 100%);
+    background: linear-gradient(to right, $color-oscuro1 0%, #2699cb 100%);
+    font-family: $font-family;
+    color: $color-claro;
 }
 ul{
     list-style: none;
 }
 a{
     text-decoration: none;
+    color: $color-claro;
 }
+.inactive{
+    display: none;
+}
+// background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);

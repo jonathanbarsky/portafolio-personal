@@ -4,33 +4,170 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/styles/dist/main.css">
     <title>Barsky Jonathan</title>
 </head>
 <body>
-    <header></header>
-    <main>
+    <header class="header">
+        <nav class="header_nav">
+            <span class="header_nav-icon inactive"><img src="./src/images/bars-solid.svg" alt="icon menu"></span>
+            <ul class="header_nav-list">
+                <li class="header_nav-item">
+                    <a class="header_nav-link" href="#perfil">About me</a>
+                </li>
+                <li class="header_nav-item">
+                    <a class="header_nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="header_nav-item">
+                    <a class="header_nav-link" href="#skillSet">Skill set</a>
+                </li>
+                <li class="header_nav-item">
+                    <a class="header_nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
         <h2></h2>
-        <section class="perfil">
-            <h1></h1>
-            <figure>
-                <img src="./src/images/Jonathan_Barsky.png" alt="jonathan barsky">
+        <section id="perfil" class="perfil">
+            <figure class="perfil_figure">
+                <img class="perfil_img" src="./src/images/Jonathan_Barsky.png" alt="jonathan barsky">
             </figure>
+            <div class="perfil_data">
+                <p class="perfil_data-greeting">Hola!</p>
+                <h1 class="perfil_data-title">Soy Jonathan Barsky</h1>
+                <h2 class="perfil_data-subtitle">Frontend Developer</h2>
+                </div>
+            <p class="perfil_description">Soy desarrollador frontend con 1 año y medio de formación y ayudo a empresas que quieran mejorar o iterar sus paginas web para brindar buenas experiencias a sus usuarios.
+            Me apasiona el aprendizaje continuo en tecnologías y habilidades que permitan mejorar la productividad.
+            Tuve la oportunidad de desarrollar proyectos de React con react-router, react states y permitir una buena legibilidad en el código con react props junto a la composición de componentes, además conozco la implementación de loading skeletons para mejorar la UX
+            </p>
         </section>
-        <section class="projects">
-                <h2></h2>
-            <div>
-                <figure>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                </figure>
-                <h3></h3>
-                <p></p>
-                <div>
-                    <button></button>
-                    <button></button>
+        <section id="projects" class="projects">
+            <h2 class="projects_title">Projects</h2>
+            <h3 class="projects_subtitle">Javascript</h3>
+            <div class="projects_container">
+                <div class="projects_item">
+                    <figure class="projects_item-figure">
+                        <img class="projects_item-img" src="./src/images/lego-super-heroes.png" alt="project lego super heroes">
+                    </figure>
+                    <div class="projects_item-data">
+                        <h3 class="projects_item-title">Lego Super Heroes</h3>
+                        <p cprojects_item-tecnologieslass="HTML5 - CSS3 "></p>
+                        <div>
+                            <button>
+                                <a href="#">GitHub</a>
+                            </button>
+                            <button>
+                                <a href="#">Project</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects_item">
+                    <figure class="projects_item-figure">
+                        <img class="projects_item-img" src="./src/images/the-movidb.png" alt="project the movie db">
+                        <figcaption></figcaption>
+                    </figure>
+                    <div class="projects_item-data">
+                        <h3 class="projects_item-title">The Movie DB API</h3>
+                        <p class="projects_item-tecnologies"></p>
+                        <div>
+                            <button>
+                                <a href="#">GitHub</a>
+                            </button>
+                            <button>
+                                <a href="#">Project</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects_item">
+                    <figure class="projects_item-figure">
+                        <img class="projects_item-img" src="./src/images/platzi-video.png" alt="project platzi video">
+                        <figcaption></figcaption>
+                    </figure>
+                    <div class="projects_item-data">
+                        <h3 class="projects_item-title">Platzi Video</h3>
+                        <p class="projects_item-tecnologies"></p>
+                        <div>
+                            <button>
+                                <a href="#">GitHub</a>
+                            </button>
+                            <button>
+                                <a href="#">Project</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects_item">
+                    <figure class="projects_item-figure">
+                        <img class="projects_item-img" src="./src/images/batabit.png" alt="project batatabit">
+                        <figcaption></figcaption>
+                    </figure>
+                    <div class="projects_item-data">
+                        <h3 class="projects_item-title">Batatabit</h3>
+                        <p class="projects_item-tecnologies"></p>
+                        <div>
+                            <button>
+                                <a href="#">GitHub</a>
+                            </button>
+                            <button>
+                                <a href="#">Project</a>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <h3 class="projects_subtitle">React</h3>
+            <div class="projects_container">
+                <div class="projects_item">
+                    <figure class="projects_item-figure">
+                        <img class="projects_item-img" src="./src/images/to-do-app.png" alt="project to-do app">
+                        <figcaption></figcaption>
+                    </figure>
+                    <div class="projects_item-data">
+                        <h3 class="projects_item-title">To-Do App</h3>
+                        <p class="projects_item-tecnologies"></p>
+                        <div>
+                            <button>
+                                <a href="#">GitHub</a>
+                            </button>
+                            <button>
+                                <a href="#">Project</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skillSet" class="skill-set">
+
+        </section>
+        <section id="contact" class="contact">
+            <h2 class="contact_title">Contact</h2>
+            <p>Contactame en caso de que este portafolio te haya gustado</p>
+            <ul class="social-media">
+                <li>
+                    <a href="https://gmail.com" target="_blank">
+                        <img class="contact_img" src="./src/images/envelope-regular.svg" alt="email-icon">
+                        <p class="social-link-text" >gmail</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/jonathanbarsky" target="_blank">
+                        <img class="contact_img" src="./src/images/github.svg" alt="github"/>
+                        <p class="social-link-text" >github</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/jonathan-barsky/" target="_blank">
+                        <img class="contact_img" src="./src/images/linkedin-in.svg" alt="linkedin"/>
+                        <p class="social-link-text" >linkedin</p>
+                    </a>
+                </li>
+            </ul>
         </section>
     </main>
     <footer></footer>
