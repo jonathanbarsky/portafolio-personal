@@ -1,4 +1,3 @@
-
 .contact{
     width: 90%;
     height: auto;
@@ -14,33 +13,56 @@
 
 }
 .social-media{
-    width: 400px;
-    height: 200px;
+    width: 100%;
+    max-width: 400px;
+    // height: 200px;
     display: flex;
     margin: 40px auto;
-    border-radius: 40px;
-    padding: 0 30px;
+    border-radius: $border-main;
+    padding: 40px 30px;
     justify-content: space-around;
     align-items: center;
-    transform: scale(1) ;
-    transition: transform 0.8s ease-in-out;
     @include glass;
     li a{
         display: flex;
         flex-direction: column;
         align-items: center;
+        opacity: 0;
+        animation: 2.5s opacidad 0.5s ease-in-out forwards;
     }
     .contact_img{
-        height: 60px;
+        height: 40px;
     }
     .social-link-text{
         margin: 10px 0;
         color: $color-claro;
     }
 }
-.social-media:hover{
-    box-shadow: 0px 0px 30px $color-claro;
-    transform: scale(1.1);
-    transition: transform 0.5s ease-in-out;
-}
+@include opacidad;
 
+@media(min-width: 425px){
+    .social-media{
+        .contact_img{
+            height: 50px;
+        }  
+    }
+    
+}
+@media (min-width: 760px){
+    .social-media{
+        transform: scale(1) ;
+        transition: transform 0.8s ease-in-out;
+        .contact_img{
+            height: 60px;
+        }
+        .contact_img:hover{
+            filter: drop-shadow( 0 0 20px $color-primario);
+            transform: scale(1.1);
+        }
+    }
+    .social-media:hover{
+        box-shadow: 0px 0px 30px $color-claro;
+        transform: scale(1.1);
+        transition: transform 0.5s ease-in-out;
+    }
+}

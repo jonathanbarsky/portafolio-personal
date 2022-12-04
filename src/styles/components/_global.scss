@@ -1,5 +1,6 @@
 
 $color-oscuro1: #373739;
+$color-oscuro1-rgba: rgba(56, 47, 43 , 1);
 
 $color-claro: aliceblue;
 // $color-primario: rgb(74, 24, 127);
@@ -9,8 +10,8 @@ $font-family: 'Lato', sans-serif;
 $font-title: 3.2rem;
 $font-subtitle: 2.4rem;
 $font-paragraph: 1.6rem;
-$border-container: 10px;
-$border-item: 20px;
+$border-main: 10px;
+$border-item: 15px;
 
 @mixin glass{
     background: rgba(255, 255, 255, 0.05);

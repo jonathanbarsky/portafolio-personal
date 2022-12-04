@@ -26,13 +26,13 @@
         place-items: center;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         grid-auto-rows: 300px;
-        border-radius: $border-container;
+        border-radius: $border-main;
         opacity: 0;
         animation: 2s apariciony 0.5s ease-in-out forwards;
         @include glass;
     }
     &_item{
-        border-radius: 20px;
+        border-radius: $border-item;
         width: 100%;
         height: 220px;
         display: inline-block;
@@ -43,13 +43,13 @@
         height: 70%;
         margin: 0 auto;
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: $border-item;
     }
     &_item-img{
         width: 100%;
         max-width: 300px;
         height: 100%;
-        border-radius: 10px;
+        border-radius: $border-item;
         object-fit: cover;
     }
     &_item-title{
@@ -59,6 +59,7 @@
     }
     &_item-data{
         width: 90%;
+        max-width: 300px;
         display: flex;
         margin: 0 auto;
         border-radius: 0 0 10px 10px;
@@ -114,7 +115,6 @@
         transition: transform 0.5s ease-in-out;
     }
     .projects_item-data{
-        max-width: 300px;
         height: 120px;
         margin: 101px auto 0 ;
         position: absolute;
@@ -123,13 +123,18 @@
         bottom: 0;
         left: 0;
         opacity: 0;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 100%);
+        background: linear-gradient(to top, rgba(56, 47, 43, 0.65) 0%, rgba(56, 47, 43, 0.3) 100%);
         animation: 1.2s opacidad-init 0s ease-in-out forwards;
     }
     .projects_item-data:hover{
         cursor: pointer;
         background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 100%);
         animation: 0.7s opacidad 0s ease-in-out forwards;
+    }
+    .projects_item-data{
+        a:hover{
+            color: $color-primario
+        }
     }
     @include opacidad;
     @include opacidad-init;
