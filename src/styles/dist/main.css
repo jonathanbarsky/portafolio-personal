@@ -107,7 +107,7 @@ a {
   max-width: 350px;
   border-radius: 50%;
   order: 2;
-  margin: 80px 30px 120px;
+  margin: 30px;
   box-shadow: 0 0 20px aliceblue;
 }
 .perfil_img {
@@ -167,10 +167,12 @@ a {
   }
   .perfil_figure {
     width: 40%;
+    margin: 80px 30px 120px;
     order: 1;
   }
   .perfil_data {
     width: 40%;
+    padding: 0;
     background: none;
     order: 2;
   }
@@ -321,6 +323,10 @@ a {
     position: relative;
     opacity: 0;
     animation: 1s opacidad 2.4s ease-in-out forwards;
+  }
+
+  .projects_item:hover {
+    filter: drop-shadow(0 0 20px #2699cb);
   }
 
   .projects_item-figure {

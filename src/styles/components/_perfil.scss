@@ -18,7 +18,7 @@
         max-width: 350px;
         border-radius: 50%;
         order: 2;
-        margin: 80px 30px 120px;
+        margin: 30px;
         box-shadow: 0 0 20px $color-claro;
     }
     &_img{
@@ -65,10 +65,12 @@
         justify-content: center;
         &_figure{
             width: 40%;
+            margin: 80px 30px 120px;
             order: 1;
         }
         &_data{
             width: 40%;
+            padding: 0;
             background: none;
             order: 2;
         }

@@ -101,9 +101,11 @@
         opacity: 0;
         animation: 1s opacidad 2.4s ease-in-out forwards;
     }
+    .projects_item:hover{
+        filter: drop-shadow( 0 0 20px $color-primario);
+    }
     .projects_item-figure{
         height: 100%;
-
     }
     .projects_item-img{
         transform: scale(1);
