@@ -6,13 +6,14 @@
     position: fixed;
     z-index: 5;
     &_nav{
-        width: 80%;
-        display: none;
-        justify-content: center;
+        width: auto;
         @include glass;
+        justify-content: center;
         &-icon{
+            display: inline-block;
             width: 40px;
             height: 40px;
+            margin: 20px;
             color: $color-claro;
             font-size: 3rem;
             img{
@@ -21,12 +22,13 @@
                 height: 100%;
             }
         }
-        
         &-list{
-            display: flex;
+            width: 70vw;
+            height: 100vh;
             justify-content: space-around;
+            align-items: center;
             flex-direction: column;
-            height: 70%;
+            padding-bottom: 200px;
         }
         &-link{
             color: $color-claro;
@@ -46,8 +48,13 @@
             width: 60%;
             height: 60px;
             border-radius: 10px 0 0 20px;    
+            @include glass;
+            &-icon{
+                display: none;
+            }
             &-list{
                 width: 100%;
+                display: flex;
                 flex-direction: row;
                 justify-content: space-around;
                 align-self: center;
