@@ -75,7 +75,9 @@
     }
     &_item-data div button{
         background: none;
-        border: none;
+        padding: 10px 15px;
+        border-radius: $border-item;
+        border: 1px solid $color-primario;
     }
     &_item-data div button a{
         font-size: $font-paragraph;
@@ -137,6 +139,13 @@
         a:hover{
             color: $color-primario
         }
+    }
+    .projects_item-data div button{
+        border: 1px solid $color-claro;
+    }
+    .projects_item-data div button:hover{
+        box-shadow: 0 0 20px $color-primario;
+        border: 1px solid $color-primario;
     }
     @include opacidad;
     @include opacidad-init;

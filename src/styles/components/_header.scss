@@ -28,11 +28,11 @@
             justify-content: space-around;
             align-items: center;
             flex-direction: column;
-            padding-bottom: 200px;
+            padding-bottom: 240px;
         }
         &-link{
             color: $color-claro;
-            font-size: 2.4rem;
+            font-size: 2rem;
             
         }
         &-link::first-letter{
@@ -59,6 +59,7 @@
                 justify-content: space-around;
                 align-self: center;
                 height: auto;
+                padding-bottom: 0;
             }
             &-link{
                 font-size: 1.8rem;
