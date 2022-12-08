@@ -24,9 +24,10 @@
         display: grid;
         padding: 20px;
         place-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         grid-auto-rows: 300px;
         border-radius: $border-main;
+        row-gap: 30px;
         opacity: 0;
         animation: 2s apariciony 0.5s ease-in-out forwards;
         @include glass;
@@ -34,13 +35,13 @@
     &_item{
         border-radius: $border-item;
         width: 100%;
-        height: 220px;
+        height: 100%;
         display: inline-block;
     }
     &_item-figure{
         width: 90%;
         max-width: 300px;
-        height: 70%;
+        height: 50%;
         margin: 0 auto;
         overflow: hidden;
         border-radius: $border-item;
@@ -88,64 +89,72 @@
 
 
 @media (min-width: 760px){
-    .projects_container:hover{
-        box-shadow: 0 0 20px $color-claro;
-    }
-    .projects_container .projects_item-figure img{
-        animation: 1s grayscale-init 0s ease-in-out forwards;
-    }
-    .projects_container:hover .projects_item-figure img{
-        animation: 0.7s grayscale 0s ease-in-out forwards;
-    }
-
-    .projects_item{
-        position: relative;
-        opacity: 0;
-        animation: 1s opacidad 2.4s ease-in-out forwards;
-    }
-    .projects_item:hover{
-        filter: drop-shadow( 0 0 20px $color-primario);
-    }
-    .projects_item-figure{
-        height: 100%;
-    }
-    .projects_item-img{
-        transform: scale(1);
-        transition: transform 1s ease-in-out;
-    }
-    .projects_item-img:hover{
-        cursor: pointer;
-        transform: scale(1.1);
-        transition: transform 0.5s ease-in-out;
-    }
-    .projects_item-data{
-        height: 120px;
-        margin: 101px auto 0 ;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 0;
-        background: linear-gradient(to top, rgba(56, 47, 43, 0.65) 0%, rgba(56, 47, 43, 0.3) 100%);
-        animation: 1.2s opacidad-init 0s ease-in-out forwards;
-    }
-    .projects_item-data:hover{
-        cursor: pointer;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 100%);
-        animation: 0.7s opacidad 0s ease-in-out forwards;
-    }
-    .projects_item-data{
-        a:hover{
-            color: $color-primario
+    .projects{
+        .projects_container{
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-auto-rows: 260px;
+            row-gap: 0;
         }
-    }
-    .projects_item-data div button{
-        border: 1px solid $color-claro;
-    }
-    .projects_item-data div button:hover{
-        box-shadow: 0 0 20px $color-primario;
-        border: 1px solid $color-primario;
+        .projects_container:hover{
+            box-shadow: 0 0 20px $color-claro;
+        }
+        .projects_container .projects_item-figure img{
+            animation: 1s grayscale-init 0s ease-in-out forwards;
+        }
+        .projects_container:hover .projects_item-figure img{
+            animation: 0.7s grayscale 0s ease-in-out forwards;
+        }
+    
+        .projects_item{
+            position: relative;
+            opacity: 0;
+            height:70%;
+            animation: 1s opacidad 2.4s ease-in-out forwards;
+        }
+        .projects_item:hover{
+            filter: drop-shadow( 0 0 20px $color-primario);
+        }
+        .projects_item-figure{
+            height: 100%;
+        }
+        .projects_item-img{
+            transform: scale(1);
+            transition: transform 1s ease-in-out;
+        }
+        .projects_item-img:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: transform 0.5s ease-in-out;
+        }
+        .projects_item-data{
+            height: 120px;
+            margin: 62px auto 0 ;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            background: linear-gradient(to top, rgba(56, 47, 43, 0.65) 0%, rgba(56, 47, 43, 0.3) 100%);
+            animation: 1.2s opacidad-init 0s ease-in-out forwards;
+        }
+        .projects_item-data:hover{
+            cursor: pointer;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 100%);
+            animation: 0.7s opacidad 0s ease-in-out forwards;
+        }
+        .projects_item-data{
+            a:hover{
+                color: $color-primario
+            }
+        }
+        .projects_item-data div button{
+            border: 1px solid $color-claro;
+        }
+        .projects_item-data div button:hover{
+            box-shadow: 0 0 20px $color-primario;
+            border: 1px solid $color-primario;
+        }
     }
     @include opacidad;
     @include opacidad-init;
