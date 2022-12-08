@@ -1,0 +1,41 @@
+.skill-set{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    .skill-set_title{
+        text-align: center;
+        margin: 50px 0 25px 0;
+        font-size: $font-title;
+    }
+    .skill-set_subtitle{
+        font-size: $font-subtitle;
+    }
+    .skill-set_list{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: 40px;
+        padding: 30px;
+        margin: 40px 0;
+        border-radius: $border-main;
+        @include glass;
+    }
+    .skill-set_list-item{
+        text-align: center;
+        align-self: center;
+        font-size: $font-paragraph;
+        font-family: 'Orbitron', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        transform: skewX(-20deg);
+        transition: transform 0.4s ease-in-out;
+    }
+}
+@media(min-width: 760px){
+    .skill-set{
+        .skill-set_list:hover{
+            box-shadow: 0 0 20px $color-claro;
+        }
+    }
+}
