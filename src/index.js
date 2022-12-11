@@ -5,6 +5,13 @@ const projecto2 = document.querySelector("#projecto-2");
 const projecto3 = document.querySelector("#projecto-3");
 const projecto4 = document.querySelector("#projecto-4");
 const projecto5 = document.querySelector("#projecto-5");
+
+const skill1 = document.querySelector("#skill-1");
+const skill2 = document.querySelector("#skill-2");
+const skill3 = document.querySelector("#skill-3");
+const skill4 = document.querySelector("#skill-4");
+const skill5 = document.querySelector("#skill-5");
+
 const listOfElements = [projecto1, projecto2,projecto3, projecto4,projecto5, projectsContainer];
 iconMenu.addEventListener("click", () => {
     if(!!navList.classList.contains("inactive")){
@@ -14,6 +21,11 @@ iconMenu.addEventListener("click", () => {
         navList.classList.remove("active");
         navList.classList.add("inactive");
     }
+})
+
+skill1.addEventListener("click",(event) => {
+    
+    skill2.classList.add("inactive")
 })
 
 // let options = {

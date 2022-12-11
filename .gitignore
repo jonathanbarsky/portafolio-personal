@@ -1,2 +1,4 @@
 observaciones.md
-lazyLoad.js
+lazyLoad
+./src/dist
+index.dev.js

@@ -241,12 +241,12 @@ a {
   width: 100%;
   height: auto;
   display: grid;
-  padding: 20px;
+  padding: 30px;
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: 300px;
   border-radius: 10px;
-  row-gap: 30px;
+  gap: 25px;
   opacity: 0;
   animation: 2s apariciony 0.5s ease-in-out forwards;
   background: rgba(255, 255, 255, 0.05);
@@ -256,10 +256,12 @@ a {
   border-radius: 15px;
   width: 100%;
   height: 100%;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .projects_item-figure {
-  width: 90%;
+  width: 100%;
   max-width: 300px;
   height: 50%;
   margin: 0 auto;
@@ -326,8 +328,7 @@ a {
 @media (min-width: 760px) {
   .projects .projects_container {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-auto-rows: 260px;
-    row-gap: 0;
+    grid-auto-rows: 220px;
   }
   .projects .projects_container:hover {
     box-shadow: 0 0 20px aliceblue;
@@ -341,13 +342,14 @@ a {
   .projects .projects_item {
     position: relative;
     opacity: 0;
-    height: 70%;
+    height: 100%;
     animation: 1s opacidad 2.4s ease-in-out forwards;
   }
   .projects .projects_item:hover {
     filter: drop-shadow(0 0 20px #2699cb);
   }
   .projects .projects_item-figure {
+    width: 100%;
     height: 100%;
   }
   .projects .projects_item-img {
@@ -361,9 +363,9 @@ a {
   }
   .projects .projects_item-data {
     height: 120px;
-    margin: 62px auto 0;
+    width: 100%;
+    margin: 0 auto;
     position: absolute;
-    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
@@ -512,7 +514,7 @@ a {
 .skill-set .skill-set_list {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   grid-auto-rows: 40px;
   padding: 30px;
   margin: 40px 0;
@@ -520,15 +522,21 @@ a {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(30px);
 }
-.skill-set .skill-set_list-item {
+.skill-set .skill-set_list-item, .skill-set .skill-set_list-item button {
+  transform: skewX(-20deg);
+  transition: transform 0.4s ease-in-out;
   text-align: center;
-  align-self: center;
   font-size: 1.6rem;
   font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;
-  transform: skewX(-20deg);
-  transition: transform 0.4s ease-in-out;
+  align-self: center;
+}
+.skill-set .skill-set_list-item button {
+  transform: skewX(0deg);
+  color: aliceblue;
+  background: none;
+  border: none;
 }
 
 @media (min-width: 760px) {

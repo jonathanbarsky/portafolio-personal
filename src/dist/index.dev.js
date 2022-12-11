@@ -7,6 +7,11 @@ var projecto2 = document.querySelector("#projecto-2");
 var projecto3 = document.querySelector("#projecto-3");
 var projecto4 = document.querySelector("#projecto-4");
 var projecto5 = document.querySelector("#projecto-5");
+var skill1 = document.querySelector("#skill-1");
+var skill2 = document.querySelector("#skill-2");
+var skill3 = document.querySelector("#skill-3");
+var skill4 = document.querySelector("#skill-4");
+var skill5 = document.querySelector("#skill-5");
 var listOfElements = [projecto1, projecto2, projecto3, projecto4, projecto5, projectsContainer];
 iconMenu.addEventListener("click", function () {
   if (!!navList.classList.contains("inactive")) {
