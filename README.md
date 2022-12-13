@@ -2,7 +2,9 @@
 
 ![portafolio de proyectos de barsky jonathan](src/images/portafolio.png)
 
-Este es mi portafolio personal para mostrar mis proyectos y habilidades como Frontend developer
+Este es mi portafolio personal para mostrar mis proyectos y habilidades como Frontend developer.
+
+Puedes accerder a la version online haciendo click [aqui](https://jonathanbarsky.github.io/portafolio-personal/) 
 
 
 ## Construido con 🛠️: 
