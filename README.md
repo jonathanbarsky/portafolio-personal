@@ -4,8 +4,9 @@
 
 Este es mi portafolio personal para mostrar mis proyectos y habilidades como Frontend developer.
 
-Puedes accerder a la version online haciendo click [aqui](https://jonathanbarsky.github.io/portafolio-personal/) 
+Diseñé este proyecto basandome en mobile first para despues mejorarlo progresivamente hasta pantallas desktop.
 
+Puedes accerder al deploy online haciendo click [aqui](https://jonathanbarsky.github.io/portafolio-personal/) 
 
 ## Construido con 🛠️: 
 - ![](https://camo.githubusercontent.com/d2da7e7ec8424780720101d4853c64dffb81dc69dfdd25a0ce88cdb3848bbc6f/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d48544d4c3526636f6c6f723d453334463236266c6f676f3d48544d4c35266c6f676f436f6c6f723d464646464646266c6162656c3d) 
@@ -49,7 +50,7 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
   ```
   git clone git@github.com:jonathanbarsky/portafolio-personal.git
   ```
-  y con HTTPS quedaria asi git clone 
+  y con HTTPS quedaria asi 
   ```
   git clone https://github.com/jonathanbarsky/portafolio-personal.git
   ```
