@@ -11,8 +11,8 @@ var skill1 = document.querySelector("#skill-1");
 var skill2 = document.querySelector("#skill-2");
 var skill3 = document.querySelector("#skill-3");
 var skill4 = document.querySelector("#skill-4");
-var skill5 = document.querySelector("#skill-5");
-var listOfElements = [projecto1, projecto2, projecto3, projecto4, projecto5, projectsContainer];
+var skill5 = document.querySelector("#skill-5"); // const listOfElements = [projecto1, projecto2,projecto3, projecto4,projecto5, projectsContainer];
+
 iconMenu.addEventListener("click", function () {
   if (!!navList.classList.contains("inactive")) {
     navList.classList.remove("inactive");
@@ -21,7 +21,10 @@ iconMenu.addEventListener("click", function () {
     navList.classList.remove("active");
     navList.classList.add("inactive");
   }
-}); // let options = {
+}); // skill1.addEventListener("click",(event) => {
+//     skill2.classList.add("inactive")
+// })
+// let options = {
 //     root: document.querySelector('#scrollArea'),
 //     rootMargin: '0px',
 //     threshold: 1.0
@@ -33,44 +36,37 @@ iconMenu.addEventListener("click", function () {
 //     entries.forEach((entry) => {
 //     });
 // }
-
-window.addEventListener("load", function (event) {
-  var projectsContainer = document.querySelector("#projects");
-  createObserver();
-}, false);
-
-function createObserver() {
-  var observer;
-  var options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: buildThresholdList()
-  };
-  observer = new IntersectionObserver(handleIntersect, options);
-  observer.observe(projectsContainer);
-}
-
-function buildThresholdList() {
-  var thresholds = [];
-  var numSteps = 20;
-
-  for (var i = 1.0; i <= numSteps; i++) {
-    var ratio = i / numSteps;
-    thresholds.push(ratio);
-  }
-
-  thresholds.push(0);
-  return thresholds;
-}
-
-function handleIntersect(entries, observer) {
-  entries.forEach(function (entry) {
-    if (entry.intersectionRatio > prevRatio) {
-      entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
-    } else {
-      entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
-    }
-
-    prevRatio = entry.intersectionRatio;
-  });
-}
+// window.addEventListener("load", (event) => {
+//     const projectsContainer = document.querySelector("#projects");
+// createObserver();
+// }, false);
+// function createObserver() {
+// let observer;
+// let options = {
+//     root: null,
+//     rootMargin: "0px",
+//     threshold: buildThresholdList()
+// };
+// observer = new IntersectionObserver(handleIntersect, options);
+// observer.observe(projectsContainer);
+// }
+// function buildThresholdList() {
+//     let thresholds = [];
+//     let numSteps = 20;
+// for (let i=1.0; i<=numSteps; i++) {
+//     let ratio = i/numSteps;
+//     thresholds.push(ratio);
+// }
+// thresholds.push(0);
+// return thresholds;
+// }
+// function handleIntersect(entries, observer) {
+//     entries.forEach((entry) => {
+//     if (entry.intersectionRatio > prevRatio) {
+//     entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
+//     } else {
+//     entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
+//     }
+//     prevRatio = entry.intersectionRatio;
+// });
+// }

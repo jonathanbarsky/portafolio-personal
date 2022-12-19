@@ -51,6 +51,7 @@
         color: $color-claro;
         border-radius: $border-main;
         font-size: $font-paragraph;
+        text-align: center;
         line-height: get-line-height($font-paragraph);
         margin-top: 20px;
         @include glass;

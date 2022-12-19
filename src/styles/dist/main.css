@@ -154,8 +154,9 @@ a {
   padding: 30px;
   color: aliceblue;
   border-radius: 10px;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2.7rem;
   margin-top: 20px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(30px);
@@ -281,7 +282,7 @@ a {
   margin: 15px 0;
 }
 .projects_item-data {
-  width: 90%;
+  width: 100%;
   max-width: 300px;
   display: flex;
   margin: 0 auto;
@@ -302,7 +303,7 @@ a {
   border: 1px solid #2699cb;
 }
 .projects_item-data div button a {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 @keyframes aparicionx {
@@ -363,7 +364,6 @@ a {
   }
   .projects .projects_item-data {
     height: 120px;
-    width: 100%;
     margin: 0 auto;
     position: absolute;
     right: 0;
@@ -435,7 +435,7 @@ a {
   text-align: center;
 }
 .contact p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .social-media {
@@ -526,7 +526,7 @@ a {
   transform: skewX(-20deg);
   transition: transform 0.4s ease-in-out;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;

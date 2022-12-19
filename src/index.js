@@ -12,7 +12,7 @@ const skill3 = document.querySelector("#skill-3");
 const skill4 = document.querySelector("#skill-4");
 const skill5 = document.querySelector("#skill-5");
 
-const listOfElements = [projecto1, projecto2,projecto3, projecto4,projecto5, projectsContainer];
+// const listOfElements = [projecto1, projecto2,projecto3, projecto4,projecto5, projectsContainer];
 iconMenu.addEventListener("click", () => {
     if(!!navList.classList.contains("inactive")){
         navList.classList.remove("inactive");
@@ -23,10 +23,10 @@ iconMenu.addEventListener("click", () => {
     }
 })
 
-skill1.addEventListener("click",(event) => {
+// skill1.addEventListener("click",(event) => {
     
-    skill2.classList.add("inactive")
-})
+//     skill2.classList.add("inactive")
+// })
 
 // let options = {
 //     root: document.querySelector('#scrollArea'),
@@ -45,44 +45,44 @@ skill1.addEventListener("click",(event) => {
 //     });
 // }
 
-window.addEventListener("load", (event) => {
-    const projectsContainer = document.querySelector("#projects");
+// window.addEventListener("load", (event) => {
+//     const projectsContainer = document.querySelector("#projects");
 
-createObserver();
-}, false);
+// createObserver();
+// }, false);
 
-function createObserver() {
-let observer;
+// function createObserver() {
+// let observer;
 
-let options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: buildThresholdList()
-};
+// let options = {
+//     root: null,
+//     rootMargin: "0px",
+//     threshold: buildThresholdList()
+// };
 
-observer = new IntersectionObserver(handleIntersect, options);
-observer.observe(projectsContainer);
-}
-function buildThresholdList() {
-    let thresholds = [];
-    let numSteps = 20;
+// observer = new IntersectionObserver(handleIntersect, options);
+// observer.observe(projectsContainer);
+// }
+// function buildThresholdList() {
+//     let thresholds = [];
+//     let numSteps = 20;
 
-for (let i=1.0; i<=numSteps; i++) {
-    let ratio = i/numSteps;
-    thresholds.push(ratio);
-}
+// for (let i=1.0; i<=numSteps; i++) {
+//     let ratio = i/numSteps;
+//     thresholds.push(ratio);
+// }
 
-thresholds.push(0);
-return thresholds;
-}
-function handleIntersect(entries, observer) {
-    entries.forEach((entry) => {
-    if (entry.intersectionRatio > prevRatio) {
-    entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
-    } else {
-    entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
-    }
+// thresholds.push(0);
+// return thresholds;
+// }
+// function handleIntersect(entries, observer) {
+//     entries.forEach((entry) => {
+//     if (entry.intersectionRatio > prevRatio) {
+//     entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
+//     } else {
+//     entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
+//     }
 
-    prevRatio = entry.intersectionRatio;
-});
-}
+//     prevRatio = entry.intersectionRatio;
+// });
+// }
