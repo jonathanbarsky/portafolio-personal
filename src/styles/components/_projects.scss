@@ -15,8 +15,7 @@
     }
     &_title,
     &_subtitle{
-        transform: translateX(-200px);
-        animation: 2s aparicionx 0.5s ease-in-out forwards;
+        opacity: 0;
     }
     &_container{
         width: 100%;
@@ -29,7 +28,6 @@
         border-radius: $border-main;
         gap: 25px;
         opacity: 0;
-        animation: 2s apariciony 0.5s ease-in-out forwards;
         @include glass;
     }
     &_item{
@@ -39,6 +37,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        opacity: 0;
     }
     &_item-figure{
         width: 100%;
@@ -85,9 +84,6 @@
         font-size: $font-paragraph;
     }
 }
-@include aparicion-ejex;
-@include aparicion-ejey;
-
 
 @media (min-width: 760px){
     .projects{
@@ -140,8 +136,8 @@
         }
         .projects_item-data:hover{
             cursor: pointer;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 100%);
             animation: 0.7s opacidad 0s ease-in-out forwards;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 100%);
         }
         .projects_item-data{
             a:hover{

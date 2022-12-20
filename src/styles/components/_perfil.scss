@@ -6,9 +6,6 @@
     margin: 0 auto;
     padding-top: 70px;
     align-items: center;
-    opacity: 0;
-    animation: 2s apariciony 0.5s ease-in-out forwards;
-    transform: translateY(200px);
     &_data-greeting{
         font-size: $font-subtitle;
         text-align: center;
@@ -17,6 +14,7 @@
         width: 70%;
         max-width: 350px;
         border-radius: 50%;
+        opacity: 0;
         order: 2;
         margin: 30px;
         box-shadow: 0 0 20px $color-claro;
@@ -30,6 +28,7 @@
         height: auto;
         padding: 20px;
         @include glass; 
+        opacity: 0;
         border-radius: 20px;
         &-title{
             color: azure;
@@ -51,13 +50,14 @@
         color: $color-claro;
         border-radius: $border-main;
         font-size: $font-paragraph;
-        text-align: center;
+        text-align: start;
         line-height: get-line-height($font-paragraph);
         margin-top: 20px;
+        transform: translateY(200px);
+        opacity: 0;
         @include glass;
     }
 }
-@include aparicion-ejey;
 
 @media (min-width: 760px){
     .perfil{
