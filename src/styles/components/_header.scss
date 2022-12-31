@@ -5,23 +5,72 @@
     justify-content: flex-end;
     position: fixed;
     z-index: 5;
+    .input-checkbox{
+        display: none;
+    }
+    .nav-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        // border: none;
+        // @include glass;
+    }
+    .nav-button span::before,
+    .nav-button span::after,
+    .nav-button span{
+        background-color: #fff;
+        width: 32px;
+        height: 3px;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    .nav-button span::before,
+    .nav-button span::after{
+        content: "";
+        position: relative;
+        display: inline-block;
+    }
+    .nav-button span::before{
+        top: -20px;
+    }
+    .nav-button span::after{
+        top: -5px;
+    }
+    .input-checkbox:checked + .nav-button span{
+        background-color: transparent;
+    }
+    .input-checkbox:checked + .nav-button span::before{
+        top: -6px;
+        transform: rotate(135deg);
+    }
+    .input-checkbox:checked + .nav-button span::after{
+        top: -18px;    
+        transform: rotate(-135deg);
+    }
+    .flags{
+        width: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .flag_item{
+        width: 30px;
+    }
+    .flag_img{
+        display: block;
+        cursor: pointer;
+    }
     &_nav{
         width: auto;
-        @include glass;
         justify-content: center;
-        &-icon{
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            margin: 20px;
-            color: $color-claro;
-            font-size: 3rem;
-            img{
-                color: $color-claro;
-                width: 100%;
-                height: 100%;
-            }
-        }
+        transform: translateX(0px);
+        transition: 1s transform 0s ease-in forwards;
+        @include glass;
         &-list{
             width: 70vw;
             height: 100vh;
@@ -29,6 +78,9 @@
             align-items: center;
             flex-direction: column;
             padding-bottom: 240px;
+            // translate: 0px 70vw;
+            // transform: translateX(70vw);
+            // transition: 1s transform 0s forwards;
         }
         &-link{
             color: $color-claro;

@@ -105,7 +105,7 @@
             position: relative;
             opacity: 0;
             height:100%;
-            animation: 1s opacidad 2.4s ease-in-out forwards;
+            animation: 2s opacidad 0s ease-in-out forwards;
         }
         .projects_item:hover{
             filter: drop-shadow( 0 0 20px $color-primario);

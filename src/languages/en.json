@@ -1,0 +1,29 @@
+{
+    "nav":{
+        "about": "About me",
+        "projects": "Proyectos",
+        "cv": "mi CV",
+        "skills": "habilidades",
+        "contact": "contacto"
+    },
+    "profile": {
+        "greeting": "Hey!",
+        "name": "I'm Jonathan Barsky",
+        "rol": "Frontend Developer",
+        "description": "Soy desarrollador frontend y ayudo a empresas que quieran iterar sus paginas web para brindar mejores experiencias a sus usuarios."
+    },
+    "projects": {
+        "title": "Proyectos",
+        "projectButton": "Proyecto"
+    },
+    "skillSet": {
+        "title": "Set de habilidades",
+        "subTitle1": "Tecnologias",
+        "subTitle2": "Otros marcos de trabajo y herramientas que utilizo",
+        "intereses": "interesado en aprender"
+    },
+    "contact": {
+        "title": "contacto",
+        "callToAction": "Si este portafolio te gustó, contáctame para que trabajemos juntos"
+    }
+}

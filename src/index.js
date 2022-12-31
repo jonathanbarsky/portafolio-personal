@@ -1,19 +1,16 @@
-const iconMenu = document.querySelector(".header_nav-icon");
-const navList = document.querySelector(".header_nav-list");
+const animatedElement = document.querySelectorAll('.revealOnScroll');
+const iconMenu = document.querySelector(".nav-button");
 
-iconMenu.addEventListener("click", () => {
-    if(!!navList.classList.contains("inactive")){
-        navList.classList.remove("inactive");
-        navList.classList.add("active");
-    } else{
-        navList.classList.remove("active");
-        navList.classList.add("inactive");
-    }
+iconMenu.addEventListener("click", async function () {
+    const modulo = await import('./iconMenuToggle.js')
+    modulo.iconMenuToggle()
 })
 
-
-const animatedElement = document.querySelectorAll('.revealOnScroll');
-
+let options = {
+    root: null,
+    rootMargin: "0px 0px -30px 0px",
+    threshold: 0
+}
 
 let observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -25,13 +22,9 @@ let observer = new IntersectionObserver((entries) => {
             } else{
                 entry.target.classList.add('animatedX');
             }
-        } 
-        // else {
-        // entry.target.classList.remove('animatedY animatedAlpha animatedX');
-        // }
-
+        }
     });
-});
+}, options);
 
 animatedElement.forEach(item => {
     observer.observe(item);

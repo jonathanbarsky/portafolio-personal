@@ -11,8 +11,27 @@
 </head>
 <body>
     <header class="header">
+        <!-- <div class="flags">
+            <div class="flag_item" data-language="es">
+                <img class="flag_img" src="./src/images/es.svg" alt="">
+            </div>
+            <div class="flag_item" data-language="en">
+                <img class="flag_img" src="./src/images/us.svg" alt="">
+            </div>
+        </div> -->
         <nav class="header_nav">
-            <span class="header_nav-icon"><img src="./src/images/bars-solid.svg" alt="icon menu"></span>
+            <div class="header_nav-icon">
+                <input
+                type="checkbox"
+                id="input-checkbox"
+                class="input-checkbox"
+                >
+                <label for="input-checkbox"
+                class="nav-button">
+                    <span></span>
+                </label>
+            </div>
+            <!-- <span class="header_nav-icon"><img src="./src/images/bars-solid.svg" alt="icon menu"></span> -->
             <ul class="header_nav-list inactive">
                 <li class="header_nav-item">
                     <a class="header_nav-link" href="#perfil">About me</a>
@@ -39,11 +58,11 @@
                 <img class="perfil_img" src="./src/images/Jonathan_Barsky.png" alt="jonathan barsky">
             </figure>
             <div class="perfil_data revealOnScroll alpha">
-                <p class="perfil_data-greeting">Hola!</p>
-                <h1 class="perfil_data-title">Soy Jonathan Barsky</h1>
-                <h2 class="perfil_data-subtitle">Frontend Developer</h2>
+                <p class="perfil_data-greeting" data-section="profile" data-value="greeting">Hola!</p>
+                <h1 class="perfil_data-title" data-section="profile" data-value="name">Soy Jonathan Barsky</h1>
+                <h2 class="perfil_data-subtitle" data-section="profile" data-value="rol">Frontend Developer</h2>
                 </div>
-            <p class="perfil_description revealOnScroll ejeY">Soy desarrollador frontend y ayudo a empresas que quieran iterar sus paginas web para brindar mejores experiencias a sus usuarios.
+            <p class="perfil_description revealOnScroll ejeY" data-section="profile" data-value="description">Soy desarrollador frontend y ayudo a empresas que quieran iterar sus paginas web para brindar mejores experiencias a sus usuarios.
             <br><br>
             Tengo experiencia desarrollando proyectos en el ecosistema de React (react-router V6, react states, react Hooks) y brindarle una mejor legibilidad al código implementando react props junto a la composición de componentes, además conozco la implementación de loading skeletons para mejorar la UX.
             <br><br>
@@ -53,12 +72,12 @@
             </p>
         </section>
         <section id="projects" class="projects">
-            <h2 class="projects_title revealOnScroll alpha">Projects</h2>
+            <h2 class="projects_title revealOnScroll alpha" data-section="projects" data-value="title">Projects</h2>
             <h3 class="projects_subtitle revealOnScroll alpha">Javascript</h3>
             <div class="projects_container revealOnScroll ejeY">
                 <div id="project-1" class="projects_item revealOnScroll alpha">
                     <figure class="projects_item-figure">
-                        <img class="projects_item-img" loading="lazy" src="./src/images/lego-super-heroes.png" alt="project lego super heroes">
+                        <img class="projects_item-img" loading="lazy" src="./src/images/Lego-Super_heroes.png" alt="project lego super heroes">
                     </figure>
                     <div class="projects_item-data">
                         <h3 class="projects_item-title">Lego Super Heroes</h3>
@@ -68,14 +87,14 @@
                                 <a target="_blank" href="https://github.com/jonathanbarsky/lego-super-heroes">GitHub</a>
                             </button>
                             <button>
-                                <a target="_blank" href="https://jonathanbarsky.github.io/lego-super-heroes/">Project</a>
+                                <a target="_blank" href="https://jonathanbarsky.github.io/lego-super-heroes/" data-section="projects" data-value="projectButton">Project</a>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div id="project-2" class="projects_item revealOnScroll alpha">
                     <figure class="projects_item-figure">
-                        <img class="projects_item-img" loading="lazy" src="./src/images/the-moviedb.png" alt="project the movie db">
+                        <img class="projects_item-img" loading="lazy" src="./src/images/The MovieDB.png" alt="project the movie db">
                         <figcaption></figcaption>
                     </figure>
                     <div class="projects_item-data">
@@ -86,14 +105,14 @@
                                 <a target="_blank" href="https://github.com/jonathanbarsky/the-movieDB-api">GitHub</a>
                             </button>
                             <button>
-                                <a target="_blank" href="https://jonathanbarsky.github.io/the-movieDB-api/">Project</a>
+                                <a target="_blank" href="https://jonathanbarsky.github.io/the-movieDB-api/" data-section="projects" data-value="projectButton">Project</a>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div id="project-3" class="projects_item revealOnScroll alpha">
                     <figure class="projects_item-figure">
-                        <img class="projects_item-img" loading="lazy" src="./src/images/platzi-video.png" alt="project platzi video">
+                        <img class="projects_item-img" loading="lazy" src="./src/images/PlatziVideo.png" alt="project platzi video">
                         <figcaption></figcaption>
                     </figure>
                     <div class="projects_item-data">
@@ -104,14 +123,14 @@
                                 <a target="_blank" href="https://github.com/jonathanbarsky/Platzi-video-">GitHub</a>
                             </button>
                             <button>
-                                <a target="_blank" href="https://jonathanbarsky.github.io/Platzi-video-/">Project</a>
+                                <a target="_blank" href="https://jonathanbarsky.github.io/Platzi-video-/" data-section="projects" data-value="projectButton">Project</a>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div id="project-4" class="projects_item revealOnScroll alpha">
                     <figure class="projects_item-figure">
-                        <img class="projects_item-img" loading="lazy" src="./src/images/batabit.png" alt="project batatabit">
+                        <img class="projects_item-img" loading="lazy" src="./src/images/Batatabit.png" alt="project batatabit">
                         <figcaption></figcaption>
                     </figure>
                     <div class="projects_item-data">
@@ -122,7 +141,7 @@
                                 <a target="_blank" href="https://github.com/jonathanbarsky/Batatabit_proyecto">GitHub</a>
                             </button>
                             <button>
-                                <a target="_blank" href="https://jonathanbarsky.github.io/Batatabit_proyecto/">Project</a>
+                                <a target="_blank" href="https://jonathanbarsky.github.io/Batatabit_proyecto/" data-section="projects" data-value="projectButton">Project</a>
                             </button>
                         </div>
                     </div>
@@ -132,7 +151,7 @@
             <div class="projects_container revealOnScroll ejeY">
                 <div id="project-5" class="projects_item revealOnScroll alpha">
                     <figure class="projects_item-figure">
-                        <img class="projects_item-img" loading="lazy" src="./src/images/to-do-app.png" alt="project to-do app">
+                        <img class="projects_item-img" loading="lazy" src="./src/images/To-Do app.png" alt="project to-do app">
                         <figcaption></figcaption>
                     </figure>
                     <div class="projects_item-data">
@@ -143,7 +162,7 @@
                                 <a target="_blank" href="https://github.com/jonathanbarsky/Todo-App">GitHub</a>
                             </button>
                             <button>
-                                <a target="_blank" href="https://jonathanbarsky.github.io/Todo-App/">Project</a>
+                                <a target="_blank" href="https://jonathanbarsky.github.io/Todo-App/" data-section="projects" data-value="projectButton">Project</a>
                             </button>
                         </div>
                     </div>
@@ -151,8 +170,8 @@
             </div>
         </section>
         <section id="skillSet" class="skill-set">
-            <h2 class="skill-set_title revealOnScroll alpha">Skill Set</h2>
-            <h3 class="skill-set_subtitle revealOnScroll alpha">Tecnologias</h3>
+            <h2 class="skill-set_title revealOnScroll alpha" data-section="skillSet" data-value="title">Skill Set</h2>
+            <h3 class="skill-set_subtitle revealOnScroll alpha" data-section="skillSet" data-value="subTitle1">Tecnologias</h3>
             <ul class="skill-set_list revealOnScroll ejeX">
                 <li class="skill-set_list-item">
                     <button id="skill-1" type="button">html5</button>
@@ -170,7 +189,7 @@
                     <button id="skill-5" type="button">sass</button>
                 </li>
             </ul>
-            <h3 class="skill-set_subtitle revealOnScroll alpha">Otros frameworks y herramientas que utilizo</h3>
+            <h3 class="skill-set_subtitle revealOnScroll alpha" data-section="skillSet" data-value="subTitle2">Otros frameworks y herramientas que utilizo</h3>
             <ul class="skill-set_list revealOnScroll ejeX">
                 <li class="skill-set_list-item">git</li>
                 <li class="skill-set_list-item">github</li>
@@ -181,7 +200,7 @@
                 <li class="skill-set_list-item">vsc</li>
                 <li class="skill-set_list-item">notion</li>
             </ul>
-            <h3 class="skill-set_subtitle revealOnScroll alpha">Interezado en aprender</h3>
+            <h3 class="skill-set_subtitle revealOnScroll alpha" data-section="skillSet" data-value="interests">Interezado en aprender</h3>
             <ul class="skill-set_list revealOnScroll ejeX">
                 <li class="skill-set_list-item">next js</li>
                 <li class="skill-set_list-item">node js</li>
@@ -189,8 +208,8 @@
             </ul>
         </section>
         <section id="contact" class="contact">
-            <h2 class="contact_title">Contact</h2>
-            <p>Si este portafolio te gustó, contáctame para que trabajemos juntos</p>
+            <h2 class="contact_title" data-section="contact" data-value="title">Contact</h2>
+            <p data-section="contact" data-value="callToAction">Si este portafolio te gustó, contáctame para que trabajemos juntos</p>
             <ul class="social-media  revealOnScroll alpha">
                 <li>
                     <a href="mailto:barskyjonathan96@gmail.com?Subject=Hola%20Jonathan!,%20vi%20tu%20portafolio%20y%20me%20pongo%20en%20contacto%20contigo%20porque%20logró%20llamar%20mi%20atención.&body=Quiero%20que%20hablemos%20sobre..." target="_blank">

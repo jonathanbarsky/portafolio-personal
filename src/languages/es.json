@@ -1,0 +1,29 @@
+{
+    "nav":{
+        "about": "Sobre mi",
+        "projects": "Proyectos",
+        "cv": "mi CV",
+        "skills": "habilidades",
+        "contact": "contacto"
+    },
+    "profile": {
+        "greeting": "Hola!",
+        "name": "Soy Jonathan Barsky",
+        "description": "Soy desarrollador frontend y ayudo a empresas que quieran iterar sus paginas web para brindar mejores experiencias a sus usuarios.<br><br>Tengo experiencia desarrollando proyectos en el ecosistema de React (react-router V6, react states, react Hooks) y brindarle una mejor legibilidad al código implementando react props junto a la composición de componentes, además conozco la implementación de loading skeletons para mejorar la UX.<br><br> Actualmente soy estudiante de platzi y trabajo para especializarme en el stack de tecnologias PERNN.<br><br>Me apasiona el aprendizaje continuo en tecnologías y habilidades que permitan mejorar la productividad.",
+        "rol": "Desarrollador Frontend"
+    },
+    "projects": {
+        "title": "Proyectos",
+        "projectButton": "Proyecto"
+    },
+    "skillSet": {
+        "title": "Set de habilidades",
+        "subTitle1": "Tecnologias",
+        "subTitle2": "Otros marcos de trabajo y herramientas que utilizo",
+        "interests": "interesado en aprender"
+    },
+    "contact": {
+        "title": "contacto",
+        "callToAction": "Si este portafolio te gustó, contáctame para que trabajemos juntos"
+    }
+}

@@ -17,7 +17,7 @@ function iconMenuToggle() {
     headerNav.classList.add("close-menu");
     setTimeout(function () {
       headerNav.classList.remove("close-menu");
-    }, 0);
+    }, 1100);
     setTimeout(function () {
       navList.classList.remove("active");
       navList.classList.add("inactive");
