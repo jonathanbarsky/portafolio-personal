@@ -1,6 +1,5 @@
-"use strict";
-
-var flagElement = document.querySelector(".flags"); // const check = document.querySelector(".check");
+// const flagElement = document.querySelector(".flags")
+// const check = document.querySelector(".check");
 // const textsToChange = document.querySelectorAll("[data-section]");
 // flagElement.addEventListener("click", (e) => {
 //     changeLanguage(e.target.parentElement.dataset.language)
@@ -15,3 +14,4 @@ var flagElement = document.querySelector(".flags"); // const check = document.qu
 //         textToChange.innerHTML = texts[section][value]
 //     }
 // }
+"use strict";

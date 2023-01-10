@@ -1,4 +1,4 @@
-const flagElement = document.querySelector(".flags")
+// const flagElement = document.querySelector(".flags")
 
 // const check = document.querySelector(".check");
 
