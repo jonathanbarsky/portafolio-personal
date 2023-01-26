@@ -64,6 +64,9 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        &_data-greeting{
+            font-size: $font-subtitle-desktop;
+        }
         &_figure{
             width: 40%;
             margin: 80px 30px 120px;
@@ -74,6 +77,15 @@
             padding: 0;
             background: none;
             order: 2;
+        }
+        &_data-title{
+            font-size: $font-title-desktop;
+        }
+        &_data-subtitle{
+            font-size: $font-subtitle-desktop;
+        }
+        &_description{
+            font-size: $font-paragraph-desktop;
         }
         &_img{
             animation: 1s grayscale-init 0s ease-in-out forwards;

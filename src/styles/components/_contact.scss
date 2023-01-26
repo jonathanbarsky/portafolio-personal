@@ -15,7 +15,6 @@
 .social-media{
     width: 100%;
     max-width: 400px;
-    // height: 200px;
     display: flex;
     margin: 40px auto;
     border-radius: $border-main;
@@ -50,6 +49,14 @@
     
 }
 @media (min-width: 760px){
+    .contact{
+        .contact_title{
+            font-size: $font-title-desktop;
+        }
+        p{
+            font-size: $font-paragraph-desktop;
+        }
+    }
     .social-media{
         transform: scale(1) ;
         transition: transform 0.8s ease-in-out;

@@ -87,6 +87,12 @@
 
 @media (min-width: 760px){
     .projects{
+        &_title{
+            font-size: $font-title-desktop;
+        }
+        &_subtitle{
+            font-size: $font-subtitle-desktop;
+        }
         .projects_container{
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             grid-auto-rows: 220px;
@@ -123,6 +129,9 @@
             transform: scale(1.1);
             transition: transform 0.5s ease-in-out;
         }
+        &_item-title{
+            font-size: $font-subtitle-desktop;
+        }
         .projects_item-data{
             height: 120px;
             margin: 0 auto;
@@ -150,6 +159,9 @@
         .projects_item-data div button:hover{
             box-shadow: 0 0 20px $color-primario;
             border: 1px solid $color-primario;
+        }
+        &_item-data div button a{
+            font-size: $font-paragraph-desktop;
         }
     }
     @include opacidad;

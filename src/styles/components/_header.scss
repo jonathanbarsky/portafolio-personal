@@ -17,8 +17,6 @@
         border: none;
         border-radius: 50%;
         cursor: pointer;
-        // border: none;
-        // @include glass;
     }
     .nav-button span::before,
     .nav-button span::after,
@@ -77,14 +75,11 @@
             justify-content: space-around;
             align-items: center;
             flex-direction: column;
-            padding-bottom: 240px;
-            // translate: 0px 70vw;
-            // transform: translateX(70vw);
-            // transition: 1s transform 0s forwards;
+            padding-bottom: 200px;
         }
         &-link{
             color: $color-claro;
-            font-size: 2rem;
+            font-size: $font-paragraph;
             
         }
         &-link::first-letter{
@@ -114,7 +109,7 @@
                 padding-bottom: 0;
             }
             &-link{
-                font-size: 1.8rem;
+                font-size: $font-paragraph-desktop;
             }
         }
     }

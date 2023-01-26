@@ -43,6 +43,15 @@
 }
 @media(min-width: 760px){
     .skill-set{
+        .skill-set_title{
+            font-size: $font-title-desktop;
+        }
+        .skill-set_subtitle{
+            font-size: $font-subtitle-desktop;
+        }
+        .skill-set_list-item, .skill-set_list-item button{
+            font-size: $font-paragraph-desktop;
+        }
         .skill-set_list:hover{
             box-shadow: 0 0 20px $color-claro;
         }
@@ -50,5 +59,6 @@
         //     cursor: pointer;               especificaciones de los que se de cada lenguaje  
         //     color: $color-primario;        por medio de una animacion
         // }
+        
     }
 }
