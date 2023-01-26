@@ -161,7 +161,7 @@ a {
   text-align: center;
 }
 .perfil_figure {
-  width: 70%;
+  width: 65%;
   max-width: 350px;
   border-radius: 50%;
   opacity: 0;
@@ -221,6 +221,7 @@ a {
   }
   .perfil_figure {
     width: 40%;
+    max-width: 400px;
     margin: 80px 30px 120px;
     order: 1;
   }
