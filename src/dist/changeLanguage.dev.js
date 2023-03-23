@@ -11,6 +11,7 @@ var linkToAbout = document.querySelector('a[href="#perfil"]');
 var linkToProjects = document.querySelector('a[href="#projects"]');
 var linkToSkills = document.querySelector('a[href="#skillSet"]');
 var linkToContact = document.querySelector('a[href="#contact"]');
+var linkToMyCv = document.querySelector('a[href="https://github.com/jonathanbarsky/JonathanBarsky/raw/main/CV%20Barsky%20Jonathan.pdf"]');
 var dataGreeting = document.querySelector(".perfil_data-greeting");
 var dataTitle = document.querySelector(".perfil_data-title");
 var perfilDescription = document.querySelector(".perfil_description");
@@ -26,6 +27,7 @@ var contactCta = document.querySelector(".contact_cta");
 var setChanges = function setChanges(language) {
   linkToAbout.innerText = "".concat(language.nav.about);
   linkToProjects.innerText = "".concat(language.nav.projects);
+  linkToMyCv.innerText = "".concat(language.nav.cv);
   linkToSkills.innerText = "".concat(language.nav.skills);
   linkToContact.innerText = "".concat(language.nav.contact);
   dataGreeting.innerText = "".concat(language.profile.greeting);
