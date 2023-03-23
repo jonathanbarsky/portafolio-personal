@@ -1,22 +1,41 @@
-// const flagElement = document.querySelector(".flags")
+import { spanish, english } from "./languages.js";
 
-// const check = document.querySelector(".check");
+const linkToAbout = document.querySelector('a[href="#perfil"]');
+const linkToProjects = document.querySelector('a[href="#projects"]');
+const linkToSkills = document.querySelector('a[href="#skillSet"]');
+const linkToContact = document.querySelector('a[href="#contact"]');
+const dataGreeting = document.querySelector(".perfil_data-greeting")
+const dataTitle = document.querySelector(".perfil_data-title")
+const perfilDescription = document.querySelector(".perfil_description")
+const projectsTitle = document.querySelector(".projects_title")
+const projectButtons = document.querySelectorAll(".projectButton")
+const skillSetTitle = document.querySelector(".skill-set_title")
+const skillSetSubtitle = document.querySelector(".skill-set_subtitle")
+const skillSetOthers = document.querySelector(".skill-set_others")
+const skillSetInterested = document.querySelector(".skill-set_interested")
+const contactTitle = document.querySelector(".contact_title")
+const contactCta = document.querySelector(".contact_cta")
 
-// const textsToChange = document.querySelectorAll("[data-section]");
+const setChanges = (language)  => {
+    linkToAbout.innerText = `${language.nav.about}`
+    linkToProjects.innerText = `${language.nav.projects}`
+    linkToSkills.innerText = `${language.nav.skills}`
+    linkToContact.innerText = `${language.nav.contact}`
+    dataGreeting.innerText = `${language.profile.greeting}`;
+    dataTitle.innerText = `${language.profile.name}`;
+    perfilDescription.innerText = `${language.profile.description}`;
+    projectsTitle.innerText = `${language.projects.title}`;
+    for(const button of projectButtons){
+        button.innerText = `${language.projects.projectButton}`;
+    };
+    skillSetTitle.innerText = `${language.skillSet.title}`;
+    skillSetSubtitle.innerText = `${language.skillSet.subTitle1}`;
+    skillSetOthers.innerText = `${language.skillSet.subTitle2}`;
+    skillSetInterested.innerText = `${language.skillSet.interested}`
+    contactTitle.innerText = `${language.contact.title}`
+    contactCta.innerText = `${language.contact.callToAction}`
+}
 
-// flagElement.addEventListener("click", (e) => {
-//     changeLanguage(e.target.parentElement.dataset.language)
-// });
-
-// const changeLanguage = async (language) => {
-//     // const requestJson = await fetch(`./languages/en.json`);
-//     const requestJson = await fetch(`http://127.0.0.1/:5500/languages/${language}.json`);
-//     const texts = await requestJson.json();
-
-//     for(const textToChange of textsToChange){
-//         const section = textToChange.dataset.section;
-//         const value = textToChange.dataset.value;
-
-//         textToChange.innerHTML = texts[section][value]
-//     }
-// }
+export async function changeLanguage(language){
+    language === "spanish" ? setChanges(spanish) : setChanges(english);
+};

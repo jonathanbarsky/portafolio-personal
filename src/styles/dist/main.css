@@ -32,6 +32,10 @@ a {
   display: flex;
 }
 
+.active-grid {
+  display: grid;
+}
+
 .header {
   width: 100%;
   display: flex;
@@ -271,6 +275,7 @@ a {
   width: 90%;
   height: auto;
   margin: 0 auto;
+  position: relative;
 }
 .projects_title {
   margin: 50px 0 25px;
@@ -398,6 +403,10 @@ a {
   }
   .projects_item-title {
     font-size: 2.4rem;
+  }
+  .projects_item-title:hover {
+    color: #2699cb;
+    cursor: pointer;
   }
   .projects .projects_item-data {
     height: 120px;
@@ -668,5 +677,203 @@ a {
   }
   100% {
     transform: translateX(55vw);
+  }
+}
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(30px);
+  position: fixed;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80vw;
+  height: 80vh;
+  border-radius: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 2fr 3fr;
+  padding: 30px;
+  gap: 0 25px;
+  opacity: 0;
+  z-index: 9;
+}
+@keyframes opacidad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.card_closeButton {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 2.8rem;
+  color: aliceblue;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.card_aside {
+  width: 100%;
+  height: 100%;
+  grid-column: 1/3;
+  grid-row: 1/-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card_aside-hidden {
+  animation: 2s opacidad-init 0s linear forwards;
+}
+.card_slider {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  justify-content: center;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.card_slides {
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.card_slides > .card_slide:nth-child(2) img {
+  width: 80%;
+}
+.card_slides > .card_slide:nth-child(3) img {
+  width: 95%;
+}
+.card_slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+  margin-right: 0px;
+  box-sizing: border-box;
+  transform-origin: center center;
+  transform: scale(1);
+}
+.card_slide a {
+  background: none;
+  border: none;
+}
+.card_slide-prev, .card_slider::before {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 5%;
+}
+.card_slide-next, .card_slider::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: 5%;
+}
+.card_slide-prev:hover, .card_slider:hover::before {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 5%;
+}
+.card_slide-next:hover, .card_slider:hover::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: 5%;
+}
+.card_slider::before, .card_slider::after, .card_slide-prev, .card_slide-next {
+  position: absolute;
+  top: 48%;
+  width: 10px;
+  height: 10px;
+  border: solid aliceblue;
+  border-width: 0 4px 4px 0;
+  padding: 3px;
+}
+.card_slider:hover::before, .card_slider:hover::after {
+  border: solid #2699cb;
+  border-width: 0 4px 4px 0;
+}
+.card_slide-prev, .card_slide-next {
+  width: 35px;
+  height: 35px;
+}
+.card_slider::before, .card_slider::after {
+  content: "";
+  z-index: 3;
+  background: none;
+  pointer-events: none;
+}
+.card_slider:hover::before, .card_slider:hover::after {
+  content: "";
+  z-index: 3;
+  background: none;
+  pointer-events: none;
+}
+.card_slider-nav {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.card_slider-navlink {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: aliceblue;
+}
+.card_figure {
+  width: 100%;
+  max-width: 500px;
+  max-height: 100%;
+  display: grid;
+  place-content: center;
+}
+.card_img {
+  width: 65%;
+  height: 100%;
+  max-height: 90%;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+.card_header {
+  width: 100%;
+  grid-column: 3/-1;
+  grid-row: 1/2;
+  text-align: center;
+}
+.card_title {
+  width: 100%;
+  font-size: 2.4rem;
+}
+.card_body {
+  width: 100%;
+  height: 100%;
+  grid-column: 3/-1;
+  grid-row: 2/-1;
+  overflow-y: scroll;
+}
+.card_copy {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.8rem;
+}
+
+@keyframes opacidad-init {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

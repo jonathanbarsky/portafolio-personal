@@ -12,6 +12,7 @@ $font-subtitle: 2rem;
 $font-paragraph: 1.6rem;
 $border-main: 10px;
 $border-item: 15px;
+$padding-container: 30px;
 
 $font-title-desktop: 3.2rem;
 $font-subtitle-desktop: 2.4rem;
@@ -100,4 +101,7 @@ a{
 }
 .active{
     display: flex;
+}
+.active-grid{
+    display: grid;
 }

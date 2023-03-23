@@ -2,6 +2,7 @@
     width: 90%;
     height: auto;
     margin: 0 auto;
+    position: relative;
     &_title{
         margin: 50px 0 25px;
         text-align: center;
@@ -131,6 +132,10 @@
         }
         &_item-title{
             font-size: $font-subtitle-desktop;
+        }
+        &_item-title:hover{
+            color: $color-primario;
+            cursor: pointer;
         }
         .projects_item-data{
             height: 120px;

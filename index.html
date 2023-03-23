@@ -11,14 +11,14 @@
 </head>
 <body>
     <header class="header">
-        <!-- <div class="flags">
-            <div class="flag_item" data-language="es">
+        <div class="flags">
+            <div class="flag_item" data-language="spanish">
                 <img class="flag_img" src="./src/images/es.svg" alt="">
             </div>
-            <div class="flag_item" data-language="en">
+            <div class="flag_item" data-language="english">
                 <img class="flag_img" src="./src/images/us.svg" alt="">
             </div>
-        </div> -->
+        </div>
         <nav class="header_nav">
             <div class="header_nav-icon">
                 <input
@@ -34,19 +34,19 @@
             <!-- <span class="header_nav-icon"><img src="./src/images/bars-solid.svg" alt="icon menu"></span> -->
             <ul class="header_nav-list inactive">
                 <li class="header_nav-item">
-                    <a class="header_nav-link" href="#perfil">About me</a>
+                    <a class="header_nav-link" href="#perfil">Sobre mi</a>
                 </li>
                 <li class="header_nav-item">
-                    <a class="header_nav-link" href="#projects">Projects</a>
+                    <a class="header_nav-link" href="#projects">Proyectos</a>
                 </li>
                 <li class="header_nav-item">
                     <a class="header_nav-link" href="https://github.com/jonathanbarsky/JonathanBarsky/raw/main/CV%20Barsky%20Jonathan.pdf">Mi cv</a>
                 </li>
                 <li class="header_nav-item">
-                    <a class="header_nav-link" href="#skillSet">Skill set</a>
+                    <a class="header_nav-link" href="#skillSet">Habilidades</a>
                 </li>
                 <li class="header_nav-item">
-                    <a class="header_nav-link" href="#contact">Contact</a>
+                    <a class="header_nav-link" href="#contact">Contacto</a>
                 </li>
             </ul>
         </nav>
@@ -58,27 +58,26 @@
                 <img class="perfil_img" src="./src/images/Jonathan_Barsky.png" alt="jonathan barsky">
             </figure>
             <div class="perfil_data revealOnScroll alpha">
-                <p class="perfil_data-greeting" data-section="profile" data-value="greeting">Hola!</p>
-                <h1 class="perfil_data-title" data-section="profile" data-value="name">Soy Jonathan Barsky</h1>
-                <h2 class="perfil_data-subtitle" data-section="profile" data-value="rol">Frontend Developer</h2>
+                <p class="perfil_data-greeting" >Hola!</p>
+                <h1 class="perfil_data-title" >Soy Jonathan Barsky</h1>
+                <h2 class="perfil_data-subtitle" >Frontend Developer</h2>
                 </div>
-            <p class="perfil_description revealOnScroll ejeY" data-section="profile" data-value="description">Soy desarrollador frontend y ayudo a empresas que quieran iterar sus paginas web para brindar mejores experiencias a sus usuarios.
+            <p class="perfil_description revealOnScroll ejeY" >
+                Desarrollador Frontend con sólidos conocimientos de HTML, CSS, Javacript para el desarrollo de páginas web con Responsive Design.
+                <br><br>
+                Mi experiencia desarrollando en el ecosistema de React incluye a react router dom V6, react Hooks, estados de React y además brindarle una mejor legibilidad al código implementando las react props junto con la composición de componentes.
+                <br><br>
+                Tengo experiencia: desarrollando proyectos de tipo Single Page App(SPA), Multi Page App(MPA), persistencia de datos, utilizar el preprocesador SASS para los estilos, consumo de APIs REST para hacer páginas dinámicas, implementar esqueletos de carga con el fin de mejorar la UX y realizar animaciones con CSS puro.
+                <br><br>
+                Soy de argentina y por ahora mi nivel de inglés es A2.
             <br><br>
-            Tengo experiencia desarrollando proyectos en el ecosistema de React (react-router V6, react states, react Hooks) y brindarle una mejor legibilidad al código implementando react props junto a la composición de componentes, además conozco la implementación de loading skeletons para mejorar la UX.
+            Me apasiona el aprendizaje continuo en tecnologías y habilidades que me permitan mejorar la productividad.
             <br><br>
-            Poseo experiencia utilizando el preprocesador sass.
-            <br><br>
-            Realice proyectos con persistencia de datos en local storage y con animaciones en CSS puro.
-            <br><br>
-            Se Implementar el Lazy load de imágenes con la web API de insersection observer y también mostrar información dinámicamente cuando sea requerida.
-            <br><br>
-            Me apasiona el aprendizaje continuo en tecnologías y habilidades que permitan mejorar la productividad.
-            <br><br>
-            Actualmente soy estudiante en platzi y trabajo para especializarme en el stack de tecnologias PERNN.
+            Actualmente soy estudiante en platzi y trabajo para especializarme en el stack de tecnologías PERNN.
             </p>
         </section>
         <section id="projects" class="projects">
-            <h2 class="projects_title revealOnScroll alpha" data-section="projects" data-value="title">Projects</h2>
+            <h2 class="projects_title revealOnScroll alpha" >Proyectos</h2>
             <h3 class="projects_subtitle revealOnScroll alpha">Javascript</h3>
             <div class="projects_container revealOnScroll ejeY">
                 <div id="project-1" class="projects_item revealOnScroll alpha">
@@ -94,7 +93,7 @@
                                 <a target="_blank" href="https://github.com/jonathanbarsky/the-movieDB-api">GitHub</a>
                             </button>
                             <button>
-                                <a target="_blank" href="https://jonathanbarsky.github.io/the-movieDB-api/" data-section="projects" data-value="projectButton">Project</a>
+                                <a target="_blank" href="https://jonathanbarsky.github.io/the-movieDB-api/"  class="projectButton">Proyecto</a>
                             </button>
                         </div>
                     </div>
@@ -111,30 +110,12 @@
                                 <a target="_blank" href="https://github.com/jonathanbarsky/lego-super-heroes">GitHub</a>
                             </button>
                             <button>
-                                <a target="_blank" href="https://jonathanbarsky.github.io/lego-super-heroes/" data-section="projects" data-value="projectButton">Project</a>
+                                <a target="_blank" href="https://jonathanbarsky.github.io/lego-super-heroes/"  class="projectButton">Proyecto</a>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div id="project-3" class="projects_item revealOnScroll alpha">
-                    <figure class="projects_item-figure">
-                        <img class="projects_item-img" loading="lazy" src="./src/images/PlatziVideo.png" alt="project platzi video">
-                        <figcaption></figcaption>
-                    </figure>
-                    <div class="projects_item-data">
-                        <h3 class="projects_item-title">Platzi Video</h3>
-                        <!-- <p class="projects_item-tecnologies">html5-css3</p> -->
-                        <div>
-                            <button>
-                                <a target="_blank" href="https://github.com/jonathanbarsky/Platzi-video-">GitHub</a>
-                            </button>
-                            <button>
-                                <a target="_blank" href="https://jonathanbarsky.github.io/Platzi-video-/" data-section="projects" data-value="projectButton">Project</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div id="project-4" class="projects_item revealOnScroll alpha">
                     <figure class="projects_item-figure">
                         <img class="projects_item-img" loading="lazy" src="./src/images/Batatabit.png" alt="project batatabit">
                         <figcaption></figcaption>
@@ -147,7 +128,7 @@
                                 <a target="_blank" href="https://github.com/jonathanbarsky/Batatabit_proyecto">GitHub</a>
                             </button>
                             <button>
-                                <a target="_blank" href="https://jonathanbarsky.github.io/Batatabit_proyecto/" data-section="projects" data-value="projectButton">Project</a>
+                                <a target="_blank" href="https://jonathanbarsky.github.io/Batatabit_proyecto/"  class="projectButton">Proyecto</a>
                             </button>
                         </div>
                     </div>
@@ -155,7 +136,7 @@
             </div>
             <h3 class="projects_subtitle revealOnScroll alpha">React</h3>
             <div class="projects_container revealOnScroll ejeY">
-                <div id="project-5" class="projects_item revealOnScroll alpha">
+                <div id="project-4" class="projects_item revealOnScroll alpha">
                     <figure class="projects_item-figure">
                         <img class="projects_item-img" loading="lazy" src="./src/images/Todo_app.png" alt="project to-do app">
                         <figcaption></figcaption>
@@ -168,7 +149,7 @@
                                 <a target="_blank" href="https://github.com/jonathanbarsky/Todo-App">GitHub</a>
                             </button>
                             <button>
-                                <a target="_blank" href="https://jonathanbarsky.github.io/Todo-App/" data-section="projects" data-value="projectButton">Project</a>
+                                <a target="_blank" href="https://jonathanbarsky.github.io/Todo-App/"  class="projectButton">Proyecto</a>
                             </button>
                         </div>
                     </div>
@@ -186,16 +167,18 @@
                                 <a target="_blank" href="https://github.com/jonathanbarsky/Space-tourism-website">GitHub</a>
                             </button>
                             <button>
-                                <a target="_blank" href="https://space-tourism-website-jonathan-barsky.netlify.app/" data-section="projects" data-value="projectButton">Project</a>
+                                <a target="_blank" href="https://space-tourism-website-jonathan-barsky.netlify.app/"  class="projectButton">Proyecto</a>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <article class="card inactive">
+        </article>
         <section id="skillSet" class="skill-set">
-            <h2 class="skill-set_title revealOnScroll alpha" data-section="skillSet" data-value="title">Skill Set</h2>
-            <h3 class="skill-set_subtitle revealOnScroll alpha" data-section="skillSet" data-value="subTitle1">Tecnologias</h3>
+            <h2 class="skill-set_title revealOnScroll alpha" >Habilidades</h2>
+            <h3 class="skill-set_subtitle revealOnScroll alpha" >Tecnologías</h3>
             <ul class="skill-set_list revealOnScroll ejeX">
                 <li class="skill-set_list-item">
                     <button id="skill-1" type="button">html5</button>
@@ -213,7 +196,7 @@
                     <button id="skill-5" type="button">sass</button>
                 </li>
             </ul>
-            <h3 class="skill-set_subtitle revealOnScroll alpha" data-section="skillSet" data-value="subTitle2">Otros frameworks y herramientas que utilizo</h3>
+            <h3 class="skill-set_subtitle skill-set_others revealOnScroll alpha" >Otros marcos de trabajo y herramientas que utilizo</h3>
             <ul class="skill-set_list revealOnScroll ejeX">
                 <li class="skill-set_list-item">git</li>
                 <li class="skill-set_list-item">github</li>
@@ -224,7 +207,7 @@
                 <li class="skill-set_list-item">vsc</li>
                 <li class="skill-set_list-item">notion</li>
             </ul>
-            <h3 class="skill-set_subtitle revealOnScroll alpha" data-section="skillSet" data-value="interests">Interezado en aprender</h3>
+            <h3 class="skill-set_subtitle skill-set_interested  revealOnScroll alpha" >Interesado en aprender</h3>
             <ul class="skill-set_list revealOnScroll ejeX">
                 <li class="skill-set_list-item">next js</li>
                 <li class="skill-set_list-item">node js</li>
@@ -232,8 +215,8 @@
             </ul>
         </section>
         <section id="contact" class="contact">
-            <h2 class="contact_title" data-section="contact" data-value="title">Contact</h2>
-            <p data-section="contact" data-value="callToAction">Si este portafolio te gustó, contáctame para que trabajemos juntos</p>
+            <h2 class="contact_title" >Contacto</h2>
+            <p class="contact_cta" >Si este portafolio te gustó, contáctame para que trabajemos juntos</p>
             <ul class="social-media  revealOnScroll alpha">
                 <li>
                     <a href="mailto:barskyjonathan96@gmail.com?Subject=Hola%20Jonathan!,%20vi%20tu%20portafolio%20y%20me%20pongo%20en%20contacto%20contigo%20porque%20logró%20llamar%20mi%20atención.&body=Quiero%20que%20hablemos%20sobre..." target="_blank">

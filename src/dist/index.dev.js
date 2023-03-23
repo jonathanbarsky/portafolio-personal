@@ -8,7 +8,10 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 var animatedElement = document.querySelectorAll('.revealOnScroll');
 var iconMenu = document.querySelector(".nav-button");
-iconMenu.addEventListener("click", function _callee() {
+var buttonShowProject = document.querySelectorAll(".projects_item-title");
+var flagElement = document.querySelector(".flags");
+var perfilDescription = document.querySelector(".perfil_description");
+flagElement.addEventListener("click", function _callee(e) {
   var modulo;
   return regeneratorRuntime.async(function _callee$(_context) {
     while (1) {
@@ -16,16 +19,38 @@ iconMenu.addEventListener("click", function _callee() {
         case 0:
           _context.next = 2;
           return regeneratorRuntime.awrap(Promise.resolve().then(function () {
-            return _interopRequireWildcard(require('./iconMenuToggle.js'));
+            return _interopRequireWildcard(require("./changeLanguage.js"));
           }));
 
         case 2:
           modulo = _context.sent;
-          modulo.iconMenuToggle();
+          modulo.changeLanguage(e.target.parentElement.dataset.language);
 
         case 4:
         case "end":
           return _context.stop();
+      }
+    }
+  });
+});
+iconMenu.addEventListener("click", function _callee2() {
+  var modulo;
+  return regeneratorRuntime.async(function _callee2$(_context2) {
+    while (1) {
+      switch (_context2.prev = _context2.next) {
+        case 0:
+          _context2.next = 2;
+          return regeneratorRuntime.awrap(Promise.resolve().then(function () {
+            return _interopRequireWildcard(require('./iconMenuToggle.js'));
+          }));
+
+        case 2:
+          modulo = _context2.sent;
+          modulo.iconMenuToggle();
+
+        case 4:
+        case "end":
+          return _context2.stop();
       }
     }
   });
@@ -50,4 +75,28 @@ var observer = new IntersectionObserver(function (entries) {
 }, options);
 animatedElement.forEach(function (item) {
   observer.observe(item);
+});
+buttonShowProject.forEach(function (item) {
+  item.addEventListener("click", function _callee3(event) {
+    var modulo;
+    return regeneratorRuntime.async(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.next = 2;
+            return regeneratorRuntime.awrap(Promise.resolve().then(function () {
+              return _interopRequireWildcard(require("./showProjectDescription.js"));
+            }));
+
+          case 2:
+            modulo = _context3.sent;
+            modulo.showProjectDescription(event);
+
+          case 4:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    });
+  });
 });
