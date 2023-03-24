@@ -77,9 +77,11 @@
     }
     &_item-data div button{
         background: none;
-        padding: 10px 15px;
+        padding: 8px 12px;
         border-radius: $border-item;
         border: 1px solid $color-primario;
+        font-size: $font-paragraph;
+        color: $color-claro;
     }
     &_item-data div button a{
         font-size: $font-paragraph;
@@ -95,7 +97,7 @@
             font-size: $font-subtitle-desktop;
         }
         .projects_container{
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             grid-auto-rows: 220px;
         }
         .projects_container:hover{
@@ -133,10 +135,6 @@
         &_item-title{
             font-size: $font-subtitle-desktop;
         }
-        &_item-title:hover{
-            color: $color-primario;
-            cursor: pointer;
-        }
         .projects_item-data{
             height: 120px;
             margin: 0 auto;
@@ -155,15 +153,18 @@
         }
         .projects_item-data{
             a:hover{
-                color: $color-primario
+                color: $color-primario;
             }
         }
         .projects_item-data div button{
+            font-size: $font-paragraph-desktop;
             border: 1px solid $color-claro;
         }
         .projects_item-data div button:hover{
             box-shadow: 0 0 20px $color-primario;
             border: 1px solid $color-primario;
+            color: $color-primario;
+            cursor: pointer;
         }
         &_item-data div button a{
             font-size: $font-paragraph-desktop;

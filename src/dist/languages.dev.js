@@ -7,6 +7,7 @@ exports.english = exports.spanish = void 0;
 var spanish = {
   "nav": {
     "about": "Sobre mi",
+    "language": "Idioma",
     "projects": "Proyectos",
     "cv": "Mi CV",
     "skills": "Habilidades",
@@ -37,6 +38,7 @@ exports.spanish = spanish;
 var english = {
   "nav": {
     "about": "About me",
+    "language": "Language",
     "projects": "Projects",
     "cv": "My CV",
     "skills": "Skill set",

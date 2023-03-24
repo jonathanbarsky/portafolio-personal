@@ -1,6 +1,7 @@
 const spanish = {
     "nav":{
         "about": "Sobre mi",
+        "language": "Idioma",
         "projects": "Proyectos",
         "cv": "Mi CV",
         "skills": "Habilidades",
@@ -40,6 +41,7 @@ const spanish = {
 const english = {
     "nav":{
         "about": "About me",
+        "language": "Language",
         "projects": "Projects",
         "cv": "My CV",
         "skills": "Skill set",

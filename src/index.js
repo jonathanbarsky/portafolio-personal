@@ -1,8 +1,9 @@
 const animatedElement = document.querySelectorAll('.revealOnScroll');
 const iconMenu = document.querySelector(".nav-button");
-const buttonShowProject = document.querySelectorAll(".projects_item-title");
-const flagElement = document.querySelector(".flags")
-const perfilDescription = document.querySelector(".perfil_description")
+const languageButton = document.querySelector(".language");
+const flagElement = document.querySelector(".flags");
+const perfilDescription = document.querySelector(".perfil_description");
+const buttonsShowProject = document.querySelectorAll(".projects_item-showData")
 
 flagElement.addEventListener("click", async (e) => {
     const modulo = await import("./changeLanguage.js")
@@ -12,6 +13,9 @@ flagElement.addEventListener("click", async (e) => {
 iconMenu.addEventListener("click", async function () {
     const modulo = await import('./iconMenuToggle.js')
     modulo.iconMenuToggle()
+})
+languageButton.addEventListener("click", () => {
+    flagElement.classList.toggle("active")
 })
 
 let options = {
@@ -37,8 +41,8 @@ let observer = new IntersectionObserver((entries) => {
 animatedElement.forEach(item => {
     observer.observe(item);
 });
-buttonShowProject.forEach(item => {
-    item.addEventListener("click", async function(event){
+buttonsShowProject.forEach(item => {
+    item.addEventListener("click", async (event) => {
         const modulo = await import("./showProjectDescription.js")
         modulo.showProjectDescription(event);
     })

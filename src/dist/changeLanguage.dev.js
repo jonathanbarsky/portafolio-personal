@@ -8,6 +8,7 @@ exports.changeLanguage = changeLanguage;
 var _languages = require("./languages.js");
 
 var linkToAbout = document.querySelector('a[href="#perfil"]');
+var languageButton = document.querySelector(".language");
 var linkToProjects = document.querySelector('a[href="#projects"]');
 var linkToSkills = document.querySelector('a[href="#skillSet"]');
 var linkToContact = document.querySelector('a[href="#contact"]');
@@ -26,6 +27,7 @@ var contactCta = document.querySelector(".contact_cta");
 
 var setChanges = function setChanges(language) {
   linkToAbout.innerText = "".concat(language.nav.about);
+  languageButton.innerText = "".concat(language.nav.language);
   linkToProjects.innerText = "".concat(language.nav.projects);
   linkToMyCv.innerText = "".concat(language.nav.cv);
   linkToSkills.innerText = "".concat(language.nav.skills);

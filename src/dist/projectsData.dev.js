@@ -27,12 +27,12 @@ var projectsData = [{
   imgMobile: "./src/images/slides/space-tourism-website-jonathan-barsky.netlify.app_(Moto G4).png",
   imgTablet: "./src/images/slides/space-tourism-website-jonathan-barsky.netlify.app_(iPad).png",
   imgDesktop: "./src/images/slides/space-tourism-website-jonathan-barsky.netlify.app_(Nest Hub Max).png",
-  projectDescription: "Space tourism website es un reto de la pagina de Frontend Mentor cuyo dise\xF1o saque de figma, en el que me bas\xE9 para realizar esta pagina.\n\n        Esta app la desarrolle en React, muestra distintos planetas y algunas de sus caracteristicas.\n\n        Implemente esqueletos de carga para simular espera la carga de la informacion, esta app esta desarrollada con mobile first a pantallas desktop\n\n        De React implemente: componentes tanto con la sintaxis de clases como de funciones, react router dom V6 para la navegacion.\n\n        Para desarrollarlo utilice: git y github para el versionado, npm instalar para los paquetes y el sistema de nomenclatura BEM para los estilos"
+  projectDescription: "Space tourism website es un reto de la pagina de Frontend Mentor cuyo dise\xF1o saque de figma, en el que me bas\xE9 para realizar esta pagina.\n\n        Esta app la desarrolle en React, muestra distintos planetas y algunas de sus caracteristicas.\n\n        Implemente esqueletos de carga para simular espera la carga de la informacion, esta app esta desarrollada con mobile first a pantallas desktop\n\n        De React implemente: componentes tanto con la sintaxis de clases como de funciones, react router dom V6 para la navegacion.\n\n        Para desarrollarlo utilice: git y github para el versionado, npm instalar para las dependencias y el sistema de nomenclatura BEM para los estilos"
 }, {
   name: "Lego Super Heroes",
   imgMobile: "./src/images/slides/jonathanbarsky.github.io_lego-super-heroes_(iPhone 6_7_8 Plus).png",
   imgTablet: "./src/images/slides/jonathanbarsky.github.io_lego-super-heroes_(iPad).png",
   imgDesktop: "./src/images/slides/jonathanbarsky.github.io_lego-super-heroes_(Nest Hub).png",
-  projectDescription: ""
+  projectDescription: "Lego Super Heroes es una Single Page App(SPA) que basicamente muestra animaciones de los elemento de la pagina.\n        \n        Cuenta con un carrusel animado que se muestra al clickear a los personajes de la seccion inferior de la pagina"
 }];
 exports.projectsData = projectsData;

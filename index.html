@@ -11,14 +11,6 @@
 </head>
 <body>
     <header class="header">
-        <div class="flags">
-            <div class="flag_item" data-language="spanish">
-                <img class="flag_img" src="./src/images/es.svg" alt="">
-            </div>
-            <div class="flag_item" data-language="english">
-                <img class="flag_img" src="./src/images/us.svg" alt="">
-            </div>
-        </div>
         <nav class="header_nav">
             <div class="header_nav-icon">
                 <input
@@ -37,10 +29,21 @@
                     <a class="header_nav-link" href="#perfil">Sobre mi</a>
                 </li>
                 <li class="header_nav-item">
+                    <a class="header_nav-link language">Idioma</a>
+                    <div class="flags inactive">
+                        <figure class="flag_item" data-language="spanish">
+                            <img class="flag_img" src="./src/images/es.svg" title="español" alt="idioma español">
+                        </figure>
+                        <figure class="flag_item" data-language="english">
+                            <img class="flag_img" src="./src/images/us.svg" title="inglés" alt="idioma ingles">
+                        </figure>
+                    </div>
+                </li>
+                <li class="header_nav-item">
                     <a class="header_nav-link" href="#projects">Proyectos</a>
                 </li>
                 <li class="header_nav-item">
-                    <a class="header_nav-link" href="https://github.com/jonathanbarsky/JonathanBarsky/raw/main/CV%20Barsky%20Jonathan.pdf">Mi cv</a>
+                    <a class="header_nav-link" href="https://github.com/jonathanbarsky/JonathanBarsky/raw/main/CV%20Barsky%20Jonathan.pdf">Mi CV</a>
                 </li>
                 <li class="header_nav-item">
                     <a class="header_nav-link" href="#skillSet">Habilidades</a>
@@ -52,7 +55,6 @@
         </nav>
     </header>
     <main class="main">
-        <h2></h2>
         <section id="perfil" class="perfil">
             <figure class="perfil_figure revealOnScroll alpha">
                 <img class="perfil_img" src="./src/images/Jonathan_Barsky.png" alt="jonathan barsky">
@@ -92,6 +94,7 @@
                             <button>
                                 <a target="_blank" href="https://github.com/jonathanbarsky/the-movieDB-api">GitHub</a>
                             </button>
+                            <button id="The Movie DB API" class="projects_item-showData" >Detalles</button>
                             <button>
                                 <a target="_blank" href="https://jonathanbarsky.github.io/the-movieDB-api/"  class="projectButton">Proyecto</a>
                             </button>
@@ -109,6 +112,7 @@
                             <button>
                                 <a target="_blank" href="https://github.com/jonathanbarsky/lego-super-heroes">GitHub</a>
                             </button>
+                            <button id="Lego Super Heroes" class="projects_item-showData" >Detalles</button>
                             <button>
                                 <a target="_blank" href="https://jonathanbarsky.github.io/lego-super-heroes/"  class="projectButton">Proyecto</a>
                             </button>
@@ -127,6 +131,7 @@
                             <button>
                                 <a target="_blank" href="https://github.com/jonathanbarsky/Batatabit_proyecto">GitHub</a>
                             </button>
+                            <button id="Batatabit" class="projects_item-showData" >Detalles</button>
                             <button>
                                 <a target="_blank" href="https://jonathanbarsky.github.io/Batatabit_proyecto/"  class="projectButton">Proyecto</a>
                             </button>
@@ -148,6 +153,7 @@
                             <button>
                                 <a target="_blank" href="https://github.com/jonathanbarsky/Todo-App">GitHub</a>
                             </button>
+                            <button id="To-Do App" class="projects_item-showData" >Detalles</button>
                             <button>
                                 <a target="_blank" href="https://jonathanbarsky.github.io/Todo-App/"  class="projectButton">Proyecto</a>
                             </button>
@@ -166,6 +172,7 @@
                             <button>
                                 <a target="_blank" href="https://github.com/jonathanbarsky/Space-tourism-website">GitHub</a>
                             </button>
+                            <button id="Space Tourism Website" class="projects_item-showData" >Detalles</button>
                             <button>
                                 <a target="_blank" href="https://space-tourism-website-jonathan-barsky.netlify.app/"  class="projectButton">Proyecto</a>
                             </button>

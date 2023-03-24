@@ -119,7 +119,7 @@ function makeCard(item) {
   body.appendChild(copy);
   var closeButton = document.createElement("button");
   closeButton.innerText = "x";
-  closeButton.addEventListener("click", function (closeButton, cardAside, header, body) {
+  closeButton.addEventListener("click", function () {
     closeCard();
   });
   closeButton.classList.add("card_closeButton");
@@ -132,7 +132,7 @@ function showProjectDescription(event) {
       switch (_context.prev = _context.next) {
         case 0:
           _projectsData.projectsData.forEach(function (item) {
-            if (event.target.textContent === item.name) {
+            if (event.target.id === item.name) {
               makeCard(item);
               showCard();
             }

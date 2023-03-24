@@ -52,8 +52,8 @@
     }
     .flags{
         width: 75px;
-        display: flex;
-        align-items: center;
+        height: 40px;
+        align-items: flex-end;
         justify-content: space-between;
     }
     .flag_item{
@@ -75,12 +75,17 @@
             justify-content: space-around;
             align-items: center;
             flex-direction: column;
-            padding-bottom: 200px;
+            padding-bottom: 150px;
+        }
+        &-item{
+            text-align: center;
         }
         &-link{
             color: $color-claro;
             font-size: $font-paragraph;
-            
+        }
+        &-link:hover{
+            cursor: pointer
         }
         &-link::first-letter{
             text-transform: uppercase;
@@ -108,8 +113,21 @@
                 height: auto;
                 padding-bottom: 0;
             }
+            &-list:nth-child(2){
+                position: relative;
+            }
             &-link{
                 font-size: $font-paragraph-desktop;
+            }
+            .flags{
+                @include glass;
+                position: absolute;
+                top: 41px;
+                height: 80px;
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-around;
+                border-radius: 0 0 $border-item $border-item;
             }
         }
     }

@@ -46,14 +46,16 @@ const projectsData = [
 
         De React implemente: componentes tanto con la sintaxis de clases como de funciones, react router dom V6 para la navegacion.
 
-        Para desarrollarlo utilice: git y github para el versionado, npm instalar para los paquetes y el sistema de nomenclatura BEM para los estilos`
+        Para desarrollarlo utilice: git y github para el versionado, npm instalar para las dependencias y el sistema de nomenclatura BEM para los estilos`
     },
     {
         name: "Lego Super Heroes",
         imgMobile: "./src/images/slides/jonathanbarsky.github.io_lego-super-heroes_(iPhone 6_7_8 Plus).png",
         imgTablet: "./src/images/slides/jonathanbarsky.github.io_lego-super-heroes_(iPad).png",
         imgDesktop: "./src/images/slides/jonathanbarsky.github.io_lego-super-heroes_(Nest Hub).png",
-        projectDescription: ""
+        projectDescription: `Lego Super Heroes es una Single Page App(SPA) que basicamente muestra animaciones de los elemento de la pagina.
+        
+        Cuenta con un carrusel animado que se muestra al clickear a los personajes de la seccion inferior de la pagina`
     }
 ]
 

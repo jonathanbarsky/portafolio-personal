@@ -117,7 +117,7 @@ function makeCard(item) {
     body.appendChild(copy);
     const closeButton = document.createElement("button");
     closeButton.innerText = "x";
-    closeButton.addEventListener("click", (closeButton, cardAside, header, body) => {
+    closeButton.addEventListener("click", () => {
         closeCard();
     });
     closeButton.classList.add("card_closeButton");
@@ -126,7 +126,7 @@ function makeCard(item) {
 }
 export async function showProjectDescription(event){
     projectsData.forEach(item => {
-        if(event.target.textContent === item.name){
+        if(event.target.id === item.name){
             makeCard(item);
             showCard();
         }
