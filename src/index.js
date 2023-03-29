@@ -5,10 +5,7 @@ const flagElement = document.querySelector(".flags");
 const perfilDescription = document.querySelector(".perfil_description");
 const buttonsShowProject = document.querySelectorAll(".projects_item-showData")
 
-flagElement.addEventListener("click", async (e) => {
-    const modulo = await import("./changeLanguage.js")
-    modulo.changeLanguage(e.target.parentElement.dataset.language)
-});
+let isInEnglish = false;
 
 iconMenu.addEventListener("click", async function () {
     const modulo = await import('./iconMenuToggle.js')
@@ -41,9 +38,16 @@ let observer = new IntersectionObserver((entries) => {
 animatedElement.forEach(item => {
     observer.observe(item);
 });
-buttonsShowProject.forEach(item => {
+
+buttonsShowProject.forEach (item => {
     item.addEventListener("click", async (event) => {
         const modulo = await import("./showProjectDescription.js")
-        modulo.showProjectDescription(event);
+        modulo.showProjectDescription(event, isInEnglish);
     })
 })
+
+flagElement.addEventListener("click", async (e) => {
+    e.target.parentElement.dataset.language === "spanish"? isInEnglish = false : isInEnglish = true;
+    const modulo = await import("./changeLanguage.js")
+    modulo.changeLanguage(e.target.parentElement.dataset.language, isInEnglish)
+});

@@ -25,7 +25,8 @@ const spanish = {
     },
     "projects": {
         "title": "Proyectos",
-        "projectButton": "Proyecto"
+        "projectButton": "Proyecto",
+        "projectsButtonDetails": "Detalles"
     },
     "skillSet": {
         "title": "Habilidades",
@@ -36,7 +37,8 @@ const spanish = {
     "contact": {
         "title": "Contacto",
         "callToAction": "Si este portafolio te gustó, contáctame y hablemos."
-    }
+    },
+    "modal": {}
 }
 const english = {
     "nav":{
@@ -65,7 +67,8 @@ const english = {
     },
     "projects": {
         "title": "Projects",
-        "projectButton": "Project"
+        "projectButton": "Project",
+        "projectsButtonDetails": "Details"
     },
     "skillSet": {
         "title": "Skill set",

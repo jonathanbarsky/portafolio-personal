@@ -22,6 +22,10 @@ $font-paragraph-desktop: 1.8rem;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(30px);
 }
+@mixin glass-dark{
+    background: rgba(56, 47, 43 , 0.25);
+    backdrop-filter: blur(10px);
+}
 @mixin aparicion-ejex{
     @keyframes aparicionx{
         0%{

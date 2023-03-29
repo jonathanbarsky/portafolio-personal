@@ -1,10 +1,11 @@
 .header{
-    width: 100%;
+    width: 80%;
     display: flex;
     height: auto;
     justify-content: flex-end;
     position: fixed;
-    z-index: 5;
+    right: 0;
+    z-index: 7;
     .input-checkbox{
         display: none;
     }
@@ -80,9 +81,18 @@
         &-item{
             text-align: center;
         }
-        &-link{
+        &-link,
+        &-button{
             color: $color-claro;
             font-size: $font-paragraph;
+            font-family: $font-family;
+        }
+        &-button{
+            background: none;
+            border: none;
+        }
+        &-button:hover{
+            cursor: pointer
         }
         &-link:hover{
             cursor: pointer
@@ -94,7 +104,7 @@
 }
 @media(min-width:760px) {
     .header{
-
+        width: 100%;
         &_nav{
             display: flex;
             width: 60%;
@@ -116,7 +126,8 @@
             &-list:nth-child(2){
                 position: relative;
             }
-            &-link{
+            &-link,
+            &-button{
                 font-size: $font-paragraph-desktop;
             }
             .flags{

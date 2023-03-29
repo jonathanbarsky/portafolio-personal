@@ -26,10 +26,10 @@ function closeCard() {
     card.removeChild(document.querySelector(".card_closeButton"));
     card.removeChild(document.querySelector(".card_header"));
     card.removeChild(document.querySelector(".card_body"));
-  }, 2000);
+  }, 1500);
 }
 
-function makeCard(item) {
+function makeCard(item, isInEnglish) {
   var cardAside = document.createElement("aside");
   var cardSlider = document.createElement("div");
   var cardSlides = document.createElement("div");
@@ -114,7 +114,14 @@ function makeCard(item) {
   title.innerText = "".concat(item.name);
   body.classList.add("card_body");
   copy.classList.add("card_copy");
-  copy.innerText = "".concat(item.projectDescription);
+  copy.innerText = "".concat(item.spanishProjectDescription);
+
+  if (isInEnglish === false) {
+    copy.innerText = "".concat(item.spanishProjectDescription);
+  } else {
+    copy.innerText = "".concat(item.englishProjectDescription);
+  }
+
   header.appendChild(title);
   body.appendChild(copy);
   var closeButton = document.createElement("button");
@@ -126,14 +133,14 @@ function makeCard(item) {
   card.append(closeButton, cardAside, header, body);
 }
 
-function showProjectDescription(event) {
+function showProjectDescription(event, isInInglish) {
   return regeneratorRuntime.async(function showProjectDescription$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
           _projectsData.projectsData.forEach(function (item) {
             if (event.target.id === item.name) {
-              makeCard(item);
+              makeCard(item, isInInglish);
               showCard();
             }
           });

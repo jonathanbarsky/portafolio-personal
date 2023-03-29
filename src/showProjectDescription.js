@@ -17,10 +17,10 @@ function closeCard(){
         card.removeChild(document.querySelector(".card_closeButton"));
         card.removeChild(document.querySelector(".card_header"));
         card.removeChild(document.querySelector(".card_body"));
-    }, 2000)
+    }, 1500)
 }
 
-function makeCard(item) {
+function makeCard(item, isInEnglish) {
     const cardAside = document.createElement("aside");
     const cardSlider = document.createElement("div");
     const cardSlides = document.createElement("div");
@@ -111,7 +111,12 @@ function makeCard(item) {
     title.innerText = `${item.name}`;
     body.classList.add("card_body");
     copy.classList.add("card_copy");
-    copy.innerText = `${item.projectDescription}`;
+    copy.innerText = `${item.spanishProjectDescription}`;
+    if(isInEnglish === false){
+        copy.innerText = `${item.spanishProjectDescription}`;
+    }else {
+        copy.innerText = `${item.englishProjectDescription}`;
+    }
 
     header.appendChild(title);
     body.appendChild(copy);
@@ -124,10 +129,10 @@ function makeCard(item) {
 
     card.append(closeButton, cardAside, header, body);
 }
-export async function showProjectDescription(event){
+export async function showProjectDescription(event, isInInglish){
     projectsData.forEach(item => {
         if(event.target.id === item.name){
-            makeCard(item);
+            makeCard(item, isInInglish);
             showCard();
         }
     })

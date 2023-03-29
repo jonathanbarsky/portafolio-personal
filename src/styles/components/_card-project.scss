@@ -1,5 +1,5 @@
 .card{
-    @include glass;
+    @include glass-dark;
     @include opacidad;
     position: fixed;
     margin: auto;
@@ -16,11 +16,11 @@
     padding: $padding-container;
     gap: 0 25px;
     opacity: 0;
-    z-index: 9;
+    z-index: 6;
     animation: 1.4s opacidad 0s ease-in-out forwards;
     &_closeButton{
         position: absolute;
-        right: 20px;
+        left: 20px;
         top: 20px;
         font-size: $font-title;
         color: aliceblue;
@@ -196,7 +196,7 @@
     &_copy{
         width: 100%;
         margin: auto;
-        font-size: $font-paragraph-desktop;
+        font-size: $font-paragraph;
     }
 }
 @include opacidad-init;
@@ -204,6 +204,11 @@
 @media(min-width:600px){
     .card{
         overflow-y: hidden;
+        &_closeButton{
+            left: 30px;
+            top: 30px;
+            z-index: 4;
+        }
         &_aside{
             height: 60vw;
             grid-column: 1 / 4;
@@ -213,6 +218,23 @@
             overflow-y: scroll;
             grid-column: 4 / -1;
             grid-row: 2 / -1;
+        }
+        &_body::-webkit-scrollbar{
+            width: 8px;
+        }
+        &_body::-webkit-scrollbar-track{
+            @include glass-dark;
+            margin-block: 2.5rem;
+            border-radius: 4px;
+        }
+        &_body::-webkit-scrollbar-thumb{
+            width: 4px;
+            background: $color-primario;
+            border: 0.2rem solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+        &_body::-webkit-scrollbar-thumb:hover{
+            cursor: pointer;
         }
     }
 }
@@ -238,6 +260,7 @@
         &_copy{
             width: 90%;
             margin: 0 auto;
+            font-size: $font-paragraph-desktop;
         }
     }
 }
