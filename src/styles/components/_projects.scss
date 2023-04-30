@@ -87,7 +87,6 @@
         font-size: $font-paragraph;
     }
 }
-
 @media (min-width: 760px){
     .projects{
         &_title{
@@ -109,12 +108,10 @@
         .projects_container:hover .projects_item-figure img{
             animation: 0.7s grayscale 0s ease-in-out forwards;
         }
-    
         .projects_item{
             position: relative;
             opacity: 0;
             height:100%;
-            animation: 2s opacidad 0s ease-in-out forwards;
         }
         .projects_item:hover{
             filter: drop-shadow( 0 0 20px $color-primario);
@@ -186,6 +183,55 @@
         }
         100%{
             filter: grayscale(1);
+        }
+    }
+}
+@media (min-width: 1000px){
+    .projects{   
+        .projects_container{
+            transform-style: preserve-3d;
+        } 
+        .projects_container:last-child .projects_item:nth-child(1){
+            translate: 45% -10px;
+        }
+        .projects_container:last-child .projects_item:nth-child(2){
+            translate: -45% 5px;
+        }
+        .projects_item{
+            transform: translateZ(-120px) rotateY(-45deg) rotateX(35deg);
+            transition: 1.8s ease-in-out;
+            filter: drop-shadow(20px 30px 40px $color-oscuro1-rgba);
+        }
+        .projects_container .projects_item:nth-child(1){
+            translate: 90% -15px;
+            z-index: 4;
+        }
+        .projects_container .projects_item:nth-child(2){
+            translate: 0px ;
+            z-index: 3;
+        }
+        .projects_container .projects_item:nth-child(3){
+            translate:  -90% 15px;
+        }
+        .projects_container:hover .projects_item{
+            transform: translateZ(0px) rotateY(0deg) rotateX(0deg) ;
+            transition: 1.4s ease-in-out;
+            translate: 0px;
+            filter: drop-shadow(0px 0px 10px $color-oscuro1-rgba);
+        }
+        .projects_container:last-child:hover .projects_item{
+            transform: translateZ(0px) rotateY(0deg) rotateX(0deg) ;
+            transition: 1.4s ease-in-out;
+            translate: 0px;
+            filter: drop-shadow(0px 0px 10px $color-oscuro1-rgba);
+        }
+        .projects_container:hover .projects_item:hover{
+            filter: drop-shadow( 0 0 20px $color-primario);
+        }
+        .projects_container:hover .projects_item:nth-child(1),
+        .projects_container:hover .projects_item:nth-child(2),
+        .projects_container:hover .projects_item:nth-child(3){
+            transform: translateZ(-75px) rotateY(-40deg) rotateX-(-40deg) ;
         }
     }
 }
