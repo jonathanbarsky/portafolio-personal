@@ -36,6 +36,16 @@ a {
   display: grid;
 }
 
+@keyframes scale-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .header {
   width: 80%;
   display: flex;
@@ -393,6 +403,14 @@ a {
   font-size: 1.6rem;
 }
 
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @media (min-width: 760px) {
   .projects_title {
     font-size: 3.2rem;
@@ -1008,6 +1026,16 @@ a {
     height: 100%;
     grid-column: 1/3;
     grid-row: 1/-1;
+  }
+  .card_slide {
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  .card_figure {
+    transform-style: preserve-3d;
+  }
+  .card_figure:hover .card_img {
+    filter: drop-shadow(0 0 8px #373739);
   }
   .card_header {
     grid-column: 3/-1;

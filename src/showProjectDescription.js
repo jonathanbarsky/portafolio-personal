@@ -128,6 +128,13 @@ function makeCard(item, isInEnglish) {
     closeButton.classList.add("card_closeButton");
 
     card.append(closeButton, cardAside, header, body);
+    tiltMouseListener();
+}
+function tiltMouseListener() {
+    VanillaTilt.init(document.querySelectorAll(".card_img"), {
+        max: 25,
+        speed: 400
+    });
 }
 export async function showProjectDescription(event, isInInglish){
     projectsData.forEach(item => {

@@ -87,6 +87,14 @@
         font-size: $font-paragraph;
     }
 }
+@keyframes scaleAnimation{
+    0%{
+        transform: scale(0.7);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 @media (min-width: 760px){
     .projects{
         &_title{

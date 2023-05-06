@@ -252,8 +252,18 @@
             grid-column: 1 / 3;
             grid-row: 1 / -1;
         }
+        &_slide{
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        &_figure {
+            transform-style: preserve-3d;
+        }
+        &_figure:hover .card_img {
+            filter: drop-shadow(0 0 8px  $color-oscuro1) ;
+        }
         &_header{
-            grid-column: 3 / -1;
+        grid-column: 3 / -1;
         }
         &_body{
             grid-column: 3 / -1;
