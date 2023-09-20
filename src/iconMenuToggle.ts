@@ -19,7 +19,7 @@ export async function iconMenuToggle() {
         setTimeout(() => {
           navList.classList.remove("active");
           navList.classList.add("inactive");
-        }, 1000)
+        }, 900)
       }
     }
 
