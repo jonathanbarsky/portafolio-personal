@@ -19,7 +19,7 @@ function closeCard(): void{
         card.classList.remove("active-grid")
         card.classList.remove("animatedAlpha")
         card.classList.add("inactive");
-        card.removeChild(document.querySelector(".card_aside")!);//el signo de exclamacion sirve para decirle a ts que este valor nuca sera null, eliminando asi el error
+        card.removeChild(document.querySelector<HTMLElement>(".card_aside")!);//el signo de exclamacion sirve para decirle a ts que este valor nuca sera null, eliminando asi el error
         card.removeChild(document.querySelector<HTMLButtonElement>(".card_closeButton")!);
         card.removeChild(document.querySelector<HTMLElement>(".card_header")!);
         card.removeChild(document.querySelector<HTMLDivElement>(".card_body")!);
@@ -141,7 +141,8 @@ function makeCard(item: Project, isInEnglish: boolean): void {
     tiltMouseListener();
 }
 function tiltMouseListener(): void {
-    VanillaTilt.init(document.querySelectorAll(".card_img"), {
+  const elements = document.querySelectorAll(".card_img")
+    VanillaTilt.init( elements, {
         max: 25,
         speed: 400
     });

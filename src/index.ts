@@ -4,12 +4,12 @@ import {iconMenuToggle} from './iconMenuToggle.js';
 import { showProjectDescription } from './showProjectDescription.js';
 import { changeLanguage } from './changeLanguage.js';
 
-const animatedElement:NodeListOf<Element> = document.querySelectorAll('.revealOnScroll');
+const animatedElement:NodeListOf<HTMLElement> = document.querySelectorAll('.revealOnScroll');
 const buttonsShowProject: NodeListOf<HTMLButtonElement> = document.querySelectorAll(".projects_item-showData")
 const iconMenu: (HTMLButtonElement | null) = document.querySelector(".nav-button");
 const languageButton: (HTMLButtonElement | null) = document.querySelector(".language");
 const flagElement: (HTMLButtonElement | null)= document.querySelector(".flags");
-const perfilDescription:unknown = document.querySelector(".perfil_description");
+const perfilDescription: (HTMLParagraphElement | null) = document.querySelector(".perfil_description");
 
 let isInEnglish: boolean = false;
 
