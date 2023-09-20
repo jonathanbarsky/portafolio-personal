@@ -1,48 +1,55 @@
-import {projectsData} from "./projectsData.js";
+//@ts-check
 
-const card = document.querySelector(".card");
-function showCard(){
+import { projectsData } from "./projectsData.js";
+import { Project } from "./interfaces.js";
+
+const card: (HTMLElement  | null) = document.querySelector(".card");
+function showCard(): void{
+  if(card){
     card.classList.remove("inactive")
     card.classList.add("active-grid")
     card.classList.add("animatedAlpha")
     card.classList.remove("card_aside-hidden")
+  }
 }
-function closeCard(){
+function closeCard(): void{
+  if(!!card){
     card.classList.add("card_aside-hidden")
     setTimeout(() => {
         card.classList.remove("active-grid")
         card.classList.remove("animatedAlpha")
         card.classList.add("inactive");
-        card.removeChild(document.querySelector(".card_aside"));
-        card.removeChild(document.querySelector(".card_closeButton"));
-        card.removeChild(document.querySelector(".card_header"));
-        card.removeChild(document.querySelector(".card_body"));
+        card.removeChild(document.querySelector(".card_aside")!);//el signo de exclamacion sirve para decirle a ts que este valor nuca sera null, eliminando asi el error
+        card.removeChild(document.querySelector<HTMLButtonElement>(".card_closeButton")!);
+        card.removeChild(document.querySelector<HTMLElement>(".card_header")!);
+        card.removeChild(document.querySelector<HTMLDivElement>(".card_body")!);
     }, 1500)
+  }
 }
 
-function makeCard(item, isInEnglish) {
-    const cardAside = document.createElement("aside");
-    const cardSlider = document.createElement("div");
-    const cardSlides = document.createElement("div");
-    const cardSLide1 = document.createElement("div");
-    const cardSLide2 = document.createElement("div");
-    const cardSLide3 = document.createElement("div");
-    const cardFigure1 = document.createElement("figure");
-    const cardFigure2 = document.createElement("figure");
-    const cardFigure3 = document.createElement("figure");
-    const cardImgmobile = document.createElement("img")
-    const cardImgTablet = document.createElement("img")
-    const cardImgDesktop = document.createElement("img")
-    const backArrow1 = document.createElement("a");
-    const backArrow2 = document.createElement("a");
-    const backArrow3 = document.createElement("a");
-    const nextArrow1 = document.createElement("a");
-    const nextArrow2 = document.createElement("a");
-    const nextArrow3 = document.createElement("a");
-    const sliderNav = document.createElement("div");
-    const cardSliderNavlink1 = document.createElement("a");
-    const cardSliderNavlink2 = document.createElement("a");
-    const cardSliderNavlink3 = document.createElement("a");
+function makeCard(item: Project, isInEnglish: boolean): void {
+    const cardAside: HTMLElement = document.createElement("aside");
+    const cardSlider: HTMLDivElement = document.createElement("div");
+    const cardSlides: HTMLDivElement = document.createElement("div");
+    const cardSLide1: HTMLDivElement = document.createElement("div");
+    const cardSLide2: HTMLDivElement = document.createElement("div");
+    const cardSLide3: HTMLDivElement = document.createElement("div");
+    const cardFigure1: HTMLElement = document.createElement("figure");
+    const cardFigure2: HTMLElement = document.createElement("figure");
+    const cardFigure3: HTMLElement = document.createElement("figure");
+    const cardImgmobile: HTMLImageElement = document.createElement("img")
+    const cardImgTablet: HTMLImageElement = document.createElement("img")
+    const cardImgDesktop: HTMLImageElement = document.createElement("img")
+    const backArrow1: HTMLAnchorElement = document.createElement("a");
+    const backArrow2: HTMLAnchorElement = document.createElement("a");
+    const backArrow3: HTMLAnchorElement = document.createElement("a");
+    const nextArrow1: HTMLAnchorElement = document.createElement("a");
+    const nextArrow2: HTMLAnchorElement = document.createElement("a");
+    const nextArrow3: HTMLAnchorElement = document.createElement("a");
+    const sliderNav: HTMLDivElement = document.createElement("div");
+    const cardSliderNavlink1: HTMLAnchorElement = document.createElement("a");
+    const cardSliderNavlink2: HTMLAnchorElement = document.createElement("a");
+    const cardSliderNavlink3: HTMLAnchorElement = document.createElement("a");
 
     backArrow1.classList.add("card_slide-prev");
     backArrow1.setAttribute("title", "Next");
@@ -101,9 +108,9 @@ function makeCard(item, isInEnglish) {
     cardAside.classList.add("card_aside");
     cardAside.appendChild(cardSlider);
 
-    const header = document.createElement("header");
+    const header: HTMLElement = document.createElement("header");
     const title = document.createElement("H2");
-    const body = document.createElement("div");
+    const body: HTMLDivElement = document.createElement("div");
     const copy = document.createElement("p");
 
     header.classList.add("card_header");
@@ -120,25 +127,28 @@ function makeCard(item, isInEnglish) {
 
     header.appendChild(title);
     body.appendChild(copy);
-    const closeButton = document.createElement("button");
+    const closeButton: HTMLButtonElement = document.createElement("button");
     closeButton.innerText = "x";
     closeButton.addEventListener("click", () => {
         closeCard();
     });
     closeButton.classList.add("card_closeButton");
 
-    card.append(closeButton, cardAside, header, body);
+    if(!!card){
+      card.append(closeButton, cardAside, header, body);
+    }
+
     tiltMouseListener();
 }
-function tiltMouseListener() {
+function tiltMouseListener(): void {
     VanillaTilt.init(document.querySelectorAll(".card_img"), {
         max: 25,
         speed: 400
     });
 }
-export async function showProjectDescription(event, isInInglish){
+export async function showProjectDescription(event: Event, isInInglish: boolean): Promise<void>{
     projectsData.forEach(item => {
-        if(event.target.id === item.name){
+        if((<HTMLElement>event.target).id === item.name){
             makeCard(item, isInInglish);
             showCard();
         }

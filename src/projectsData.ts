@@ -1,4 +1,6 @@
-const projectsData = [
+import { Project } from "./interfaces";
+
+const projectsData: Array<Project> = [
     {
         name: "Batatabit",
         imgMobile: "./src/images/slides/jonathanbarsky.github.io_Batatabit_proyecto_(iPhone 6_7_8 Plus).png",
@@ -26,16 +28,16 @@ const projectsData = [
         spanishProjectDescription: `The Movie DB es una Multi Page App que muestra catálogos de películas separadas por categorías, también cuenta con la característica de tener un buscador en que podrás buscar la película que desees, esto gracias al consumo de la API de The Movie DB.
 
         Los pósteres y secciones de la página irán apareciendo dinámicamente a medida que navegues.
-        
+
         La UI y los estilos los desarrollé con responsive design, mobile first hasta pantallas desktop.
-        
+
         Para el desarrollo utilicé: HTML5, CSS3(grid, flexbox y nomenclatura BEM), javascript(consumo de API REST, manipulación del DOM , intersection observer, localstorage, lazy load de las imagenes, navegación con hash) y animaciones con CSS puro.`,
         englishProjectDescription: `The movie DB is a Multi Page App that shows catalogs of movies separated by categories, it also has the feature of having a search engine where you can search for the movie you want, thanks to the consumption of The Movie DB API.
 
         The posters and sections of the page will appear dynamically as you navigate.
-        
+
         The UI and the styles were developed with responsive design, mobile first up to desktop screens.
-        
+
         For the development I used: HTML5, CSS3 (grid, flexbox and BEM nomenclature), javascript (REST API consumption, DOM manipulation, intersection observer, localstorage, lazy load of images, navigation with hash) and animations with pure CSS.`
     },
     {
@@ -82,16 +84,16 @@ const projectsData = [
         spanishProjectDescription: `Lego Super Heroes es una Single Page App(SPA) que básicamente muestra personajes héroes animados de los elementos de la página.
 
         Cuenta con un carrusel animado que se muestra como modal al clickear a los personajes de la sección inferior de la página, este carrusel tiene un efecto en 3D al mostrar los distintos personajes que tiene.
-        
+
         Se desarrolló primeramente para pantallas desktop y después aplique responsive design haciendo que se pueda visualizar también en dispositivos móviles.
-        
+
         Lo desarrollé con: HTML5, CSS, la metodología BEM, animaciones con CSS puro y Javascript para que los elemente se muestren al hacer scroll en dispositivos móviles.`,
         englishProjectDescription: `Lego Super Heroes is a Single Page App(SPA) that basically displays animated hero characters of page elements.
 
         It has an animated carousel that is displayed as a modal when clicking on the characters in the lower section of the page, this carousel has a 3D effect by showing the different characters it has.
-        
+
         It was first developed for desktop screens and then applied responsive design making it also viewable on mobile devices.
-        
+
         I developed it with: HTML5, CSS, the BEM methodology, animations with pure CSS and Javascript so that the elements are displayed when scrolling on mobile devices.`
     }
 ]

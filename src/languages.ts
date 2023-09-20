@@ -1,4 +1,6 @@
-const spanish = {
+import { Language } from "./interfaces";
+
+const spanish: Language = {
     "nav":{
         "about": "Sobre mi",
         "language": "Idioma",
@@ -38,9 +40,8 @@ const spanish = {
         "title": "Contacto",
         "callToAction": "Si este portafolio te gustó, contáctame y hablemos."
     },
-    "modal": {}
 }
-const english = {
+const english: Language = {
     "nav":{
         "about": "About me",
         "language": "Language",

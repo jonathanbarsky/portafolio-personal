@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jonatham Barsky <barskyjonathan96@gmail.com>",
-  "license": "MIT"
+  "author": "Jonathan Barsky <barskyjonathan96@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
 }
